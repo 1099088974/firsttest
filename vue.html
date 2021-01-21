@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Vue Demo
+        </title>
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <div id="firstVue" >
+            <input type="number" v-model="my_step"/>
+            <a v-bind:href="url">click here</a>
+            <button v-on:click="clickButton">click Button</button>
+            <p>{{my_data}}</p>
+            <p>{{my_total}}</p>
+        </div>
+    </body>
+    <script type="text/javascript">
+    var myVue=new Vue({
+        el:"#firstVue",
+        data:{
+            my_step:1,
+            my_total:0,
+            my_data:"game",
+            url:"https://www.baidu.com"
+        },
+        methods:{
+            clickButton:function() {
+                this.my_total=this.my_total+this.my_step
+            }
+
+        }
+    })
+
+    </script>
+</html>
