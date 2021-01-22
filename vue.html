@@ -6,6 +6,12 @@
         </title>
         <script src="vue.js"></script>
     </head>
+    <style>
+        .class1{
+            background: #888811;
+            color: aqua;
+        }
+    </style>
     <body>
         <div id="firstVue" >
             <input type="number" v-model="my_step"/>
@@ -13,6 +19,12 @@
             <button v-on:click="clickButton">click Button</button>
             <p>{{my_data}}</p>
             <p>{{my_total}}</p>
+            
+            <input type="checkbox" v-model="choose"/>
+            <div v-bind:class="{'class1':choose}">class</div>
+            <p>{{czj}}</p>
+            <button v-on:click="reverseMessage">反转字符</button>
+            <p>{{czj|test}}</p>
         </div>
     </body>
     <script type="text/javascript">
@@ -22,13 +34,29 @@
             my_step:1,
             my_total:0,
             my_data:"game",
-            url:"https://www.baidu.com"
+            url:"https://www.baidu.com",
+            choose:false,
+            czj:'czj',
         },
         methods:{
             clickButton:function() {
                 this.my_total=this.my_total+this.my_step
+            },
+            reverseMessage:function(){
+                this.czj=this.czj.split('').reverse().join('')
+                
+                
             }
-
+        },
+        filters:{
+            test:function (value) 
+            {
+                if (!value) {
+                    return ''
+                }
+                value=value.toString();
+                return value=value.charAt(0).toUpperCase()+value.slice(1)
+            }
         }
     })
 

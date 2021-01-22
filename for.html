@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            循环语句
+        </title>
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <div id="for">
+            <ol>
+                <li v-for="site in sites">
+                    {{site.name}}
+                </li>
+            </ol>
+            <ul>
+                <template v-for="text in texts">
+                    <li>{{text.name}}</li>
+                    <li>--------------</li>
+                </template>
+            </ul>
+        </div>
+
+    </body>
+    <script type="text/javaScript">
+    new Vue({
+        el:'#for',
+        data:{
+            sites:[
+                {name:'czj'},
+                {name:'18'}
+            ],
+            texts:[
+                {name:'qwe'},
+                {name:'poi'}
+            ]
+
+        }
+    })
+    </script>
+</html>
