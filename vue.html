@@ -25,6 +25,9 @@
             <p>{{czj}}</p>
             <button v-on:click="reverseMessage">反转字符</button>
             <p>{{czj|test}}</p>
+            <button v-on:click="reverseMessage2">反转字符计算</button>
+            <p>{{reverseMessage1}}</p>
+            <p>{{czj1|test}}</p>
         </div>
     </body>
     <script type="text/javascript">
@@ -37,6 +40,12 @@
             url:"https://www.baidu.com",
             choose:false,
             czj:'czj',
+            czj1:'czj1'
+        },
+        computed:{
+            reverseMessage1:function(){
+                return this.czj.split('').reverse().join('')
+            }
         },
         methods:{
             clickButton:function() {
@@ -44,8 +53,9 @@
             },
             reverseMessage:function(){
                 this.czj=this.czj.split('').reverse().join('')
-                
-                
+            },
+            reverseMessage2:function(){
+                this.czj1=this.czj1.split('').reverse().join('')
             }
         },
         filters:{
