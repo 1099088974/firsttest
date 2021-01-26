@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            事件处理
+        </title>
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <div id="chuli">
+            <button @click.right="say('hello')">请点击我</button>
+        </div>
+    </body>
+    <script type="text/javascript">
+    var vm=new Vue({
+        el:'#chuli',
+        methods:{
+            say:function(message){
+                alert(message)
+
+            }
+        }
+
+
+    })
+    
+    </script>
+</html>
