@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            表单
+        </title>
+        <script src="vue.js"></script>
+    </head>
+    <body>     
+        <div id="model">
+            <input v-model="message" placeholder="请编辑">
+            <textarea v-model="message1" placeholder="多行输入"></textarea>
+        </div>
+        
+
+    </body>
+    <script type="text/javascript">
+    new Vue({
+        el:'#model',
+        data:{
+            message:'root',
+            message1:'root1\r\nhttp'
+        }
+    })
+
+    </script>
+</html>

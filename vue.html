@@ -43,7 +43,9 @@
             czj1:'czj1'
         },
         computed:{
+            // 计算属性的 getter
             reverseMessage1:function(){
+                // `this` 指向 vm 实例
                 return this.czj.split('').reverse().join('')
             }
         },
