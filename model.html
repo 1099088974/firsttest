@@ -11,6 +11,39 @@
             <input v-model="message" placeholder="请编辑">
             <textarea v-model="message1" placeholder="多行输入"></textarea>
         </div>
+        <div id="app">
+            <p>单个复选框</p>
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox">{{checked}}</label>
+            <p>多个复选框</p>
+            <input type="checkbox" id="first" value="first" v-model="checkedNames">
+            <label for="first">first</label>
+            <input type="checkbox" id="second" value="second" v-model="checkedNames">
+            <label for="second">second</label>
+            <input type="checkbox" id="third" value="third" v-model="checkedNames">
+            <label for="third">third</label>
+            <br>
+            <span>值为{{checkedNames}}</span>
+        </div>
+        <div id="app1">
+            <p>单选框</p>
+            <input type="radio" id="first" value="first" v-model="chose">
+            <label for="choose">选择1</label>
+            <input type="radio" id="second" value="second" v-model="chose">
+            <label for="choose">选择2</label>
+            <br>
+            <span>{{chose}}</span>
+        </div>
+        <div id="app2">
+            <p>选择一个网站</p>
+            <select name="choose" id="choose" v-model="selected">
+                <option value="">选择一个网站</option>
+                <option value="www.baidu.com">百度</option>
+                <option value="www.qq.com">腾讯</option>
+            </select>
+            <br>
+            <p>{{selected}}</p>
+        </div>
         
 
     </body>
@@ -20,6 +53,25 @@
         data:{
             message:'root',
             message1:'root1\r\nhttp'
+        }
+    })
+    new Vue({
+        el:'#app',
+        data:{
+            checked:false,
+            checkedNames:[]
+        }
+    })
+    new Vue({
+        el:'#app1',
+        data:{
+            chose:'first'
+        }
+    })
+    new Vue({
+        el:'#app2',
+        data:{
+            selected:''
         }
     })
 
