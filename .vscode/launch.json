@@ -11,7 +11,7 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}",
-            "file":"${workspaceFolder}/cut.html"
+            "file":"${workspaceFolder}/css/text.html"
         }
     ]
 }
