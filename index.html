@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        菜鸟工具
+    </title>
+    <script src="vue.js">
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font:22px "Open Sans",sans-serif;
+            color: aqua;
+            background-color: gray;
+            text-align: center;
+
+        }
+        a,a:visited{
+            outline: none;
+            color: rgb(255, 255, 255);
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .container {
+            background-color: #66CC66;
+            width: auto;
+            height: 50px;
+            padding: 0px;
+            margin: 0px;
+        }
+        .container a{
+            text-decoration:none;
+        }
+        .container a.weight{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .table{
+            display:inline-block;
+        }
+        .search{
+            display:inline-block;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+            letter-spacing: 3px;
+        }
+        ul.list{
+        list-style: none;
+        width: 500px;
+        margin: 0 auto;
+        text-align: left;
+        
+    }
+    ul.list li{
+        padding: 10px;
+        overflow: hidden;
+        
+    }
+    ul.list li p{
+        margin-left: 135px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a class="weight" href="/firsttest/firsttest/index.html">菜鸟工具</a>
+
+        <div class="table">
+            <ul>
+                <li><a href="https://www.baidu.com">百度</a></li>
+                <li><a href="https://www.qq.com">QQ</a></li>
+                <li><a href="https://www.sougou.com">搜狗</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="输入关键字……">
+            <button><i>搜索</i></button>
+        </div>
+    </div>
+    <div id="app">
+        <p>编译工具</p>
+        <ul class="list">
+            <li v-for="a in articles">
+                <a v-bind:href="a.url" target="_blank">
+                    <p>{{a.zero}}</p>
+                    <br>
+                    <p>{{a.one}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; <a href="//www.runoob.com/">菜鸟教程</a> 2021 备案号：<a target="_blank" rel="nofollow"
+                        href="https://beian.miit.gov.cn/">闽ICP备15012807号-1</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+new Vue({
+    el:"#app",
+    data:{
+        articles:[{
+                "zero":"PHP在线工具",
+                "one":"在线编译、运行 PHP 代码",
+                "url":"https://www.baidu.com"
+            },
+        {
+            "zero":"Python 在线工具",
+                "one":"在线编译、运行 Python 代码",
+            "url":"https://www.qq.com"           
+        },
+        {
+            "zero":"Python3 在线工具",
+                "one":"在线编译、运行 Python3 代码",
+            "url":"https://www.qq.com"           
+        },
+        {
+            "zero":"Java在线工具",
+                "one":"在线编译、运行 Java 代码",
+            "url":"https://www.qq.com"           
+        },
+        {
+            "zero":"C 在线工具",
+                "one":"在线编译、运行 C语言 代码",
+            "url":"https://www.qq.com"           
+        }]
+        
+    }
+})
+
+</script>
+
+</html>
