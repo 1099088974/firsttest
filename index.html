@@ -64,6 +64,7 @@
         }
 
         .h3title {
+            margin-top: -50px;
             padding: 20px 100px;
             text-align: left;
         }
@@ -104,7 +105,10 @@
             word-break:keep-all;
         }
         .bianyi{
-            text-align: center;
+            margin: 50px;
+            padding: 500px;
+            
+            background-color: rgb(255, 255, 255);
         }
     </style>
 </head>
@@ -125,7 +129,8 @@
             <button><i>搜索</i></button>
         </div>
     </div>
-    <div id="app" class="bianyi">
+    <div id="app">
+        <div class="bianyi">
         <h3 class="h3title">编译工具</h3>
         <div class="all" v-for="a in articles">
             <div class="media"><a v-bind:href="a.url"><img v-bind:src="a.image"></a></div>
@@ -134,6 +139,7 @@
                 <span>{{a.one}}</span>
             </div>
         </div>
+    </div>
     </div>
 </body>
 <script type="text/javascript">
