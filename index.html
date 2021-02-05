@@ -57,20 +57,21 @@
         }
 
         .all {
-            margin-left: 100px;
+            margin-right: 100px;
+            display: inline-block;
             
-            float: left;
             
         }
 
         .h3title {
             margin-top: -50px;
-            padding: 20px 100px;
+            padding: 20px 10px;
             text-align: left;
         }
 
         .media {
             display: inline-block;
+            vertical-align: top;
         }
 
         .media img {
@@ -93,7 +94,12 @@
             width: 200px;
             margin-right: -100px;
             text-align: left;
-            float: right;
+            display: inline-block;
+            vertical-align:bottom;
+            
+        }
+        .list h4{
+            display: inline-block;
         }
         .list span{
             font-size: 18px;
@@ -106,9 +112,9 @@
         }
         .bianyi{
             margin: 50px;
-            padding: 500px;
+            padding: 50px;
             
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(79, 75, 75);
         }
     </style>
 </head>
@@ -132,7 +138,7 @@
     <div id="app">
         <div class="bianyi">
         <h3 class="h3title">编译工具</h3>
-        <div class="all" v-for="a in articles">
+        <div class="all" v-for="(a,key) in articles">
             <div class="media"><a v-bind:href="a.url"><img v-bind:src="a.image"></a></div>
             <div class="list">
                 <h4 class="h4title"><a v-bind:href="a.url">{{a.zero}}</a></h4>
