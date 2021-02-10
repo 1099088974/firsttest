@@ -1,11 +1,42 @@
 import 'package:flutter/material.dart';
+/*
 import 'package:english_words/english_words.dart';
 import 'package:flutter/rendering.dart';
+*/
 
 void main() {
-  runApp(MyApp());
+  runApp(new MaterialApp(
+    title: 'My app',
+    home: new MyScaffold(),
+  ));
 }
 
+class MyAppBar extends StatelessWidget {
+  MyAppBar({this.title});
+  final Widget title;
+}
+
+class MyScaffold extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Material(
+      child: new Column(children: <Widget>[
+        new MyAppBar(
+          title: new Text(
+            'Example title',
+            style: Theme.of(context).primaryTextTheme.title,
+          ),
+        ),
+        new Expanded(
+          child: new Center(
+            child: new Text('Hello,world'),
+          ),
+        ),
+      ]),
+    );
+  }
+}
+/*
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -55,4 +86,4 @@ class RandomWordsState extends State<RandomWords> {
       body: _buildSuggestions(),
     );
   }
-}
+}*/
