@@ -1,50 +1,283 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            36Kr
-        </title>
-    </head>
-    <script src="vue.js">
-    </script>
-    <style>
-.pinpai {
-  position: relative;
-  display: inline-block;
-}
-.pinpai-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.pinpai-content a{
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.pinpai-content a:hover{
-    background-color: #f1f1f1;
-}
-.pinpai:hover .pinpai-content {
-  display: block;
-}
-    </style>
-    <body>
+
+<head>
+    <title>
+        36Kr
+    </title>
+</head>
+<script src="vue.js">
+</script>
+<style>
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 44px;
+        width: 100%;
+        line-height: 44px;
+        background: #3b3b3b;
+        z-index: 1000;
+    }
+
+    .header-main {
+        float: left;
+        height: 100%;
+    }
+
+    .header-main-first{
+        position: relative;
+        display: inline-block;
+    }
+    .header-main-first-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-main-first-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .header-main-first-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .header-main-first:hover .header-main-first-content {
+        display: block;
+    }
+    .header-main-second{
+        position: relative;
+        display: inline-block;
+    }
+    .header-main-third{
+        position: relative;
+        display: inline-block;
+    }
+    .header-main-fourth{
+        position: relative;
+        display: inline-block;
+    }
+    .header-main-fifth{
+        position: relative;
+        display: inline-block;
+    }
+    .header-main-sixth{
+        position: relative;
+        display: inline-block;
+    }
+    .a,span{
+        color: white;
+        margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+    box-sizing: border-box;
+    }
+    .space{
+        position: relative;
+        display: inline-block;
+    }
+    .footer{
+        color: white;
+        background: #2d3237;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    }
+    .footer.footer-content{
+        width: 1280px;
+    margin: 0 auto;
+    padding-top: 26px;
+    background: #2d3237;
+    }
+    .footer.footer-content .footer-content-main{
+        margin-left: 195px;
+    width: 1030px;
+    background: #2d3237;
+    }
+    .footer-content-first{
+        color: red;
+    display: inline-block;
+    vertical-align: top;
+    }
+    .footer-content-second{
+        display: inline-block;
+    vertical-align: top;
+    width: 528px;
+    margin-left: 95px;
+
+    }
+    .footer-content-second .footer-content-second-style{
+        margin-top: 16px;
+    }
+    .footer-content-second .footer-content-second-style li{
+        display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    width: 68px;
+    height: 30px;
+    }
+    .footer-content-second .footer-content-second-style li a{
+        opacity: .6;
+    display: inline-block;
+    height: 40px;
+    }
+    .footer-content-second .footer-content-second-style li a img{
+        width: 68px;
+    height: 30px;
+    display: inline-block;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    ol,ul{
+        list-style: none;
+    }
+</style>
+
+<body>
+    <div id="app">
         <div class="header">
-                <div class="pinpai">
-            <span>媒体品牌</span>
-            <div class="pinpai-content">
-            <a href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
-            <a href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
-            <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
-            <a href="http://letschuhai.com">36氪出海</a>
-            <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
-            <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
+            <div class="header-main">
+                <div class="header-main-first">
+                    <span>媒体品牌</span>
+                    <div class="header-main-first-content">
+                        <a
+                            href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
+                        <a href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
+                        <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
+                        <a href="http://letschuhai.com">36氪出海</a>
+                        <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
+                        <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
+                    </div>
+                </div>
+                <div class="header-main-second">
+                    <span>企业服务</span>
+                </div>
+                <div class="header-main-third">
+                    <span>政府服务</span>
+                </div>
+                <div class="header-main-fourth">
+                    <span>投资人服务</span>
+                </div>
+                <div class="header-main-fifth">
+                    <span>创业者服务</span>
+                </div>
+                <div class="header-main-sixth">
+                    <span>会员服务</span>
+                </div>
+            </div>
+        <div class="header-search">
+            <span class="search-icon"></span>
+            <span class="search-text">搜索</span>
+        </div>
+        <div class="user-login">
+            <span class="user-login-icon"></span>
+            <span class="user-login-text">登录</span>
+        </div>
+        <a href="https://36kr.com/topics/799051634713857" class="space" target="_blank" rel="noopener noreferrer">清朗网络空间</a>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-content-main">
+            <div class="footer-content-first">
+                <p>36氪</p>
+                <div>
+                    <li>城市加盟</li>
+                    <li>寻求报道</li>
+                    <li>我要入驻</li>
+                    <li>投资者关系</li>
+                </div>
+                <div>
+                    <li>商务合作</li>
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>加入我们</li>
+                </div>
+            </div>
+            <div class="footer-content-second">
+                <div>合作伙伴</div>
+                <ul class="footer-content-second-style">
+                    <li><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer nofollow">
+                    <img src="image/aly.png" alt>
+                    </a></li>
+                    <li><a href="https://www.volcengine.cn/">
+                    <img src="image/hsyq.png" alt>
+                    </a></li>
+                    <li><a href="https://www.upyun.com/">
+                        <img src="image/ypy.png" alt>
+                    </a></li>
+                    <li>
+                        <a href="https://www.baidu.com">
+                            <img src="image/gaudi.png" alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.teambition.com/?utm_source=36kr&utm_campaign=logo-brand">
+                            <img src="image/teambition.png" alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.getui.com/">
+                            <img src="image/getui.png" alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.odaily.com/">
+                            <img src="image/dailyPlanet.png" alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.easemob.com/">
+                            <img src="image/huanxin.png" alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.jingdata.com/">
+                            <img src="image/jingzhun.png" alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.krspace.cn/">
+                            <img src="image/ke.png " alt>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.futunn.com/">
+                        <img src="image/ftnn.png" alt>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="footer-content-third">
+
+            </div>
+            <div class="footer-content-fourth">
+
+            </div>
         </div>
         </div>
-        </div>
-    </body>
+
+    </div>
+
+    </div>
+</body>
+
 </html>
