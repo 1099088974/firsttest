@@ -21,14 +21,17 @@
         z-index: 1000;
         font-size: 15px;
     }
-    .header-all{
+
+    .header-all {
         width: 1280px;
         margin: 0 auto;
     }
-    .header-all-content{
+
+    .header-all-content {
         margin-left: 195px;
         width: 1030px;
     }
+
     .header-main {
         float: left;
         height: 100%;
@@ -116,30 +119,152 @@
         word-break: break-word;
         box-sizing: border-box;
     }
-    .space{
+
+    .space {
         display: inline-block;
     }
 
-    .space a{
+    .space a {
         display: inline-block;
-    width: 90px;
-    height: 22px;
-    background-image: url(image/clear.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-left: 22px;
-    margin-top: 11px;
+        width: 90px;
+        height: 22px;
+        background-image: url(image/clear.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-left: 22px;
+        margin-top: 11px;
     }
-    .header-search{
+
+    .header-search {
         float: right;
         width: 80px;
         text-align: center;
     }
 
-    .user-login{
+    .user-login {
         float: right;
         width: 80px;
         text-align: center;
+    }
+
+    .main {
+        width: 1170px;
+        margin: 44px auto 0;
+    }
+
+    .main-left {
+        width: 100px;
+        min-height: 600px;
+        float: left;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .main-left .main-left-first {
+        position: fixed;
+    }
+
+    .main-left .main-left-first .main-left-second {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 125px;
+        padding-right: 25px;
+        padding-top: 30px;
+        z-index: 10001;
+    }
+
+
+
+    .main-logo {
+        float: right;
+        width: 68px;
+        height: 38px;
+        background: url(image/home.png) no-repeat;
+        background-size: 246px 1012px;
+        background-position: 0 0;
+    }
+
+    .main-left-list {
+        transition: all 1s;
+        opacity: 1;
+
+    }
+
+    .main-left-line {
+        width: 60px;
+        height: 1px;
+        background: #ddd;
+        float: right;
+        margin-top: 13px;
+    }
+
+    .main-left-listAll {
+        padding-top: 41px;
+        position: relative;
+    }
+
+    .left-new-icon {
+        display: inline-block;
+        background: url(data:image/home.png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUCAMAAADSpG8HAAAAjVBMVEUAAAD/Y2P/Y2P/Y2P/YmL/Y2P/ZGT/ZGT/Zmb/bW3/YmL/////aWn/u7v/mJj/jo7/+/v/goL/nJz/29v/ysr/c3P/ior/enr/b2//9/f/8/P/4eH/xcX/tbX/p6f/n5//dnb/Zmb/9fX/6ur/6en/5eX/1NT/0ND/v7//s7P/q6v/k5P/kJD/fn7/wsLdxGk5AAAACnRSTlMA2Pm1j4tAMzIHqetxhwAAAMxJREFUKM+t0McOwyAQRVHSkzeAcYxL3J3e///zYqIUvIlZ5C6QGB2BNGyE3kYMDrmjRlwA+KKJhelSixsQiQRYnj6I06puB8Q90nmeS64KQJMEttpGwQuFMO3ba5oekVBlofOqtFGp+I3OW0gKLSQrFT8RKaUixBSVWU3hMYONcMgqg66+73NgczoU2Cx3RRcl6e77HUSw9nDfU9RFkPR+KQY8UrydrIEugjbIFACNao+EtNPG/47Gg58Nn6in+cABscUEQ9bfbMpcegAleh0ZHd6gHwAAAABJRU5ErkJggg==) no-repeat 50%;
+        background-size: contain;
+        cursor: pointer;
+        width: 18px;
+        height: 10px;
+        position: absolute;
+        right: 41px;
+        top: 444px;
+    }
+
+    .main-left-item {
+        line-height: 40px;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    .left-open-icon {
+        display: inline-block;
+        padding: 6px;
+        background: url(image/home.png) no-repeat;
+        transform: rotate(-180deg);
+        background-size: 246px 1012px;
+        background-position: 0 -38px;
+        cursor: pointer;
+        transition: transform .5s linear;
+        margin-right: 4px;
+    }
+
+    .left-sub {
+        transition: all .5s linear;
+        overflow: hidden;
+        max-height: 0;
+        width: 220px;
+        margin-left: -40px;
+
+    }
+
+    .main-left-sub-item1 {
+        float: right;
+        width: 48px;
+        margin-right: 16px;
+    }
+
+    .main-left-sub-item2 {
+        float: right;
+        width: 48px;
+        margin-right: 16px;
+    }
+
+    .sub-item1 {
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+    }
+
+    .sub-item2 {
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
     }
 
     .footer {
@@ -290,6 +415,30 @@
     ul {
         list-style: none;
     }
+
+    .clearfloat:after {
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .open {
+        max-height: 162px;
+    }
+
+    .close {
+        width: 24px;
+        height: 24px;
+        float: right;
+        background: url(image/home.png) no-repeat;
+        background-size: 24px 114px;
+        background-position: 0 0;
+        position: relative;
+        top: 9px;
+        cursor: pointer
+    }
 </style>
 
 <body>
@@ -297,66 +446,110 @@
         <div class="header">
             <div class="header-all">
 
-            
-            <div class="header-all-content">
-            <div class="header-main">
-                <div class="header-main-first">
-                    <span>媒体品牌</span>
-                    <div class="header-main-first-content">
-                        <a
-                            href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
-                        <a href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
-                        <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
-                        <a href="http://letschuhai.com">36氪出海</a>
-                        <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
-                        <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
+
+                <div class="header-all-content">
+                    <div class="header-main">
+                        <div class="header-main-first">
+                            <span>媒体品牌</span>
+                            <div class="header-main-first-content">
+                                <a
+                                    href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
+                                <a
+                                    href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
+                                <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
+                                <a href="http://letschuhai.com">36氪出海</a>
+                                <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
+                                <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
+                            </div>
+                        </div>
+                        <div class="header-main-second">
+                            <span>企业服务</span>
+                        </div>
+                        <div class="header-main-third">
+                            <span>政府服务</span>
+                        </div>
+                        <div class="header-main-fourth">
+                            <span>投资人服务</span>
+                        </div>
+                        <div class="header-main-fifth">
+                            <span>创业者服务</span>
+                        </div>
+                        <div class="header-main-sixth">
+                            <span>会员服务</span>
+                        </div>
                     </div>
-                </div>
-                <div class="header-main-second">
-                    <span>企业服务</span>
-                </div>
-                <div class="header-main-third">
-                    <span>政府服务</span>
-                </div>
-                <div class="header-main-fourth">
-                    <span>投资人服务</span>
-                </div>
-                <div class="header-main-fifth">
-                    <span>创业者服务</span>
-                </div>
-                <div class="header-main-sixth">
-                    <span>会员服务</span>
+
+                    <div class="user-login">
+                        <span class="user-login-icon"></span>
+                        <span class="user-login-text">登录</span>
+                    </div>
+                    <div class="header-search">
+                        <span class="search-icon"></span>
+                        <span class="search-text">搜索</span>
+                    </div>
+                    <div class="space"> <a href="https://36kr.com/topics/799051634713857" target="_blank"
+                            rel="noopener noreferrer"></a></div>
+
                 </div>
             </div>
- 
-            <div class="user-login">
-                <span class="user-login-icon"></span>
-                <span class="user-login-text">登录</span>
-            </div>
-            <div class="header-search">
-                <span class="search-icon"></span>
-                <span class="search-text">搜索</span>
-            </div>
-            <div class="space"> <a href="https://36kr.com/topics/799051634713857" target="_blank"
-                rel="noopener noreferrer"></a></div>
-           
-        </div>
-    </div>
         </div>
         <div class="main">
-            <div class="main-content">
-                <div class="main-left">
-                    <div class="main-logo">
-                        <img src="image/36Krlogo.png" alt>
+            <div class="main-left clearfloat">
+                <div class="main-left-first">
+                    <div class="main-left-second">
+                        <a href="https://36kr.com/">
+                            <div class="main-logo clearfloat">
+                            </div>
+                        </a>
+
+                        <div class="main-left-list clearfloat">
+                            <div class="main-left-line">
+                            </div>
+                            <ul class="main-left-listAll">
+                                <li class="main-left-item" v-for="a in articles">
+                                    <div class="main-left-sub"><a v-bind:href="a.url">{{a.sub}}</a>
+                                    </div>
+                                    <div v-if="a.sub=='资讯'">
+                                        <span class="left-open-icon"></span>
+                                        <div class="left-sub open">
+                                            <ul class="main-left-sub-item2">
+                                                <li class="sub-item2" v-for="a in item2">
+                                                    <a v-bind:href="a.url">{{a.sub}}</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="main-left-sub-item1">
+                                                <li class="sub-item1" v-for="a in item1"><a
+                                                        v-bind:href="a.url">{{a.sub}}</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div v-else-if="a.sub=='直播'">
+                                        <span class="left-new-icon"></span>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            搜索
+                        </div>
+                        <div>
+                            寻求报道
+                        </div>
+                        <div>
+                            我要入驻
+                        </div>
                     </div>
                 </div>
-                <div class="main-center">
-
-                </div>
-                <div class="main-right">
-
-                </div>
             </div>
+            <div class="main-center">
+
+            </div>
+            <div class="main-right">
+
+            </div>
+
 
         </div>
         <div class="footer">
@@ -474,5 +667,83 @@
 
     </div>
 </body>
+<script type="text/javascript">
+    new Vue({
+        el: "#app",
+        data: {
+            articles: [{
+                    "url": "https://36kr.com/",
+                    "sub": "首页"
+                },
+                {
+                    "url": "https://36kr.com/newsflashes",
+                    "sub": "快讯"
+                },
+                {
+                    "url": "https://36kr.com/information/web_news",
+                    "sub": "资讯"
+                },
+                {
+                    "url": "https://36kr.com/live/channel",
+                    "sub": "直播"
+                },
+                {
+                    "url": "https://36kr.com/video",
+                    "sub": "视频"
+                },
+                {
+                    "url": "https://36kr.com/topics",
+                    "sub": "专题"
+                },
+                {
+                    "url": "https://36kr.com/activity",
+                    "sub": "活动"
+                }
+            ],
+            item1: [{
+                    "url": "https://36kr.com/information/web_news/latest",
+                    "sub": "最新"
+                },
+                {
+                    "url": "https://36kr.com/information/contact",
+                    "sub": "创投"
+                },
+                {
+                    "url": "https://36kr.com/information/travel",
+                    "sub": "汽车"
+                },
+                {
+                    "url": "https://36kr.com/information/enterpriseservice",
+                    "sub": "企服"
+                },
+                {
+                    "url": "https://36kr.com/information/innovate",
+                    "sub": "创新"
+                }
+            ],
+            item2: [{
+                    "url": "https://36kr.com/information/web_recommend",
+                    "sub": "推荐"
+                },
+                {
+                    "url": "https://36kr.com/information/ccs",
+                    "sub": "Markets"
+                },
+                {
+                    "url": "https://36kr.com/information/technology",
+                    "sub": "科技"
+                },
+                {
+                    "url": "https://36kr.com/information/happy_life",
+                    "sub": "生活"
+                },
+                {
+                    "url": "https://36kr.com/local/jiangsu",
+                    "sub": "城市"
+                }
+            ]
+        }
+    })
+</script>
 
 </html>
