@@ -10,15 +10,21 @@
 <script src="vue.js">
 </script>
 <style>
+    .all {
+        position: relative;
+        min-width: 1280px;
+        margin: 0 auto;
+    }
+
     .header {
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
         height: 44px;
         width: 100%;
         line-height: 44px;
         background: #3b3b3b;
-        z-index: 1000;
+
         font-size: 15px;
     }
 
@@ -150,6 +156,7 @@
     .main {
         width: 1170px;
         margin: 44px auto 0;
+        position: relative;
     }
 
     .main-left {
@@ -157,11 +164,11 @@
         min-height: 600px;
         float: left;
         position: relative;
-        z-index: 1000;
+
     }
 
     .main-left .main-left-first {
-        position: fixed;
+        position: absolute;
     }
 
     .main-left .main-left-first .main-left-second {
@@ -267,12 +274,138 @@
         font-size: 16px;
     }
 
+    .main-right {
+        width: 1030px;
+        float: right;
+    }
+
+    .main-right-img {
+        top: 0;
+        width: 1030px;
+        height: 100px;
+        background: url(image/banner.png) no-repeat 50%;
+        background-size: cover;
+    }
+
+    .main-right-content {
+        width: 1030px;
+        margin: auto;
+        min-height: 1000px;
+        position: relative;
+    }
+
+    .right-home {
+        padding-top: 0 !important;
+    }
+
+    .right-home-top {
+        height: 140px;
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .right-banner img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .right-home-banner {
+        text-align: center;
+        height: 300px;
+        min-height: 300px;
+    }
+
+    .right-home-banner-left {
+        float: left;
+        width: 720px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 2px;
+        position: relative;
+    }
+    .right-home-banner-left:hover .left,.right{
+        display: block;
+    }
+
+    .right-home-banner-right {
+        float: right;
+        width: 300px;
+    }
+    .banner-left-all{
+        width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    }
+    .banner-left-list{
+        height: 100%;
+    margin-left: -100%;
+    position: absolute;
+    top: 0px;
+    width: 800%;
+
+    }
+
+    .bannerLeft{
+        height: 100%;
+    float: left;
+    width: 12.5%;
+    }
+    .bannerLeft-list{
+        height: 100%;
+    width: 720px;
+    float: left;
+    background: #fff;
+    transition: transform 1s;
+    border-radius: 2px;
+    overflow: hidden;
+    }
+    .bannerLeft-item{
+        height: 100%;
+    position: relative;
+    }
+    .bannerLeft-item img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .right-home-content {}
+    .left{
+        height: 40px;
+    width: 28px;
+    z-index: 10;
+    position: absolute;
+    top: 130px;
+    cursor: pointer;
+    display: none;
+    background: url(image/left.jpg) no-repeat 50%;
+    background-size: 246px 1012px;
+    background-position: 0 -904px;
+    left: 0;
+    }
+    .right{
+        background: url(image/right.jpg) no-repeat 50%;
+    background-size: 246px 1012px;
+    background-position: 0 -944px;
+    right: 0;
+    height: 40px;
+    width: 28px;
+    z-index: 10;
+    position: absolute;
+    top: 130px;
+    cursor: pointer;
+    display: none;
+    }
+
+
     .footer {
         color: white;
         background: #2d3237;
-        z-index: 1000;
         width: 100%;
-        position: fixed;
+        position: relative;
         bottom: 0px;
         left: 0px;
     }
@@ -437,232 +570,324 @@
         background-position: 0 0;
         position: relative;
         top: 9px;
-        cursor: pointer
+        cursor: pointer;
     }
 </style>
 
 <body>
     <div id="app">
-        <div class="header">
-            <div class="header-all">
+        <div class="all">
+            <div class="header">
+                <div class="header-all">
 
 
-                <div class="header-all-content">
-                    <div class="header-main">
-                        <div class="header-main-first">
-                            <span>媒体品牌</span>
-                            <div class="header-main-first-content">
-                                <a
-                                    href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
-                                <a
-                                    href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
-                                <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
-                                <a href="http://letschuhai.com">36氪出海</a>
-                                <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
-                                <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
+                    <div class="header-all-content">
+                        <div class="header-main">
+                            <div class="header-main-first">
+                                <span>媒体品牌</span>
+                                <div class="header-main-first-content">
+                                    <a
+                                        href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
+                                    <a
+                                        href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
+                                    <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
+                                    <a href="http://letschuhai.com">36氪出海</a>
+                                    <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
+                                    <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
+                                </div>
+                            </div>
+                            <div class="header-main-second">
+                                <span>企业服务</span>
+                            </div>
+                            <div class="header-main-third">
+                                <span>政府服务</span>
+                            </div>
+                            <div class="header-main-fourth">
+                                <span>投资人服务</span>
+                            </div>
+                            <div class="header-main-fifth">
+                                <span>创业者服务</span>
+                            </div>
+                            <div class="header-main-sixth">
+                                <span>会员服务</span>
                             </div>
                         </div>
-                        <div class="header-main-second">
-                            <span>企业服务</span>
-                        </div>
-                        <div class="header-main-third">
-                            <span>政府服务</span>
-                        </div>
-                        <div class="header-main-fourth">
-                            <span>投资人服务</span>
-                        </div>
-                        <div class="header-main-fifth">
-                            <span>创业者服务</span>
-                        </div>
-                        <div class="header-main-sixth">
-                            <span>会员服务</span>
-                        </div>
-                    </div>
 
-                    <div class="user-login">
-                        <span class="user-login-icon"></span>
-                        <span class="user-login-text">登录</span>
-                    </div>
-                    <div class="header-search">
-                        <span class="search-icon"></span>
-                        <span class="search-text">搜索</span>
-                    </div>
-                    <div class="space"> <a href="https://36kr.com/topics/799051634713857" target="_blank"
-                            rel="noopener noreferrer"></a></div>
+                        <div class="user-login">
+                            <span class="user-login-icon"></span>
+                            <span class="user-login-text">登录</span>
+                        </div>
+                        <div class="header-search">
+                            <span class="search-icon"></span>
+                            <span class="search-text">搜索</span>
+                        </div>
+                        <div class="space"> <a href="https://36kr.com/topics/799051634713857" target="_blank"
+                                rel="noopener noreferrer"></a></div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="main">
-            <div class="main-left clearfloat">
-                <div class="main-left-first">
-                    <div class="main-left-second">
-                        <a href="https://36kr.com/">
-                            <div class="main-logo clearfloat">
-                            </div>
-                        </a>
+            <div class="main clearfloat">
+                <div class="main-left">
+                    <div class="main-left-first">
+                        <div class="main-left-second">
+                            <a href="https://36kr.com/">
+                                <div class="main-logo clearfloat">
+                                </div>
+                            </a>
 
-                        <div class="main-left-list clearfloat">
-                            <div class="main-left-line">
-                            </div>
-                            <ul class="main-left-listAll">
-                                <li class="main-left-item" v-for="a in articles">
-                                    <div class="main-left-sub"><a v-bind:href="a.url">{{a.sub}}</a>
-                                    </div>
-                                    <div v-if="a.sub=='资讯'">
-                                        <span class="left-open-icon"></span>
-                                        <div class="left-sub open">
-                                            <ul class="main-left-sub-item2">
-                                                <li class="sub-item2" v-for="a in item2">
-                                                    <a v-bind:href="a.url">{{a.sub}}</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="main-left-sub-item1">
-                                                <li class="sub-item1" v-for="a in item1"><a
-                                                        v-bind:href="a.url">{{a.sub}}</a></li>
-                                            </ul>
-
+                            <div class="main-left-list clearfloat">
+                                <div class="main-left-line">
+                                </div>
+                                <ul class="main-left-listAll">
+                                    <li class="main-left-item" v-for="a in articles">
+                                        <div class="main-left-sub"><a v-bind:href="a.url">{{a.sub}}</a>
                                         </div>
-                                    </div>
-                                    <div v-else-if="a.sub=='直播'">
-                                        <span class="left-new-icon"></span>
-                                    </div>
+                                        <div v-if="a.sub=='资讯'">
+                                            <span class="left-open-icon"></span>
+                                            <div class="left-sub open">
+                                                <ul class="main-left-sub-item2">
+                                                    <li class="sub-item2" v-for="a in item2">
+                                                        <a v-bind:href="a.url">{{a.sub}}</a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="main-left-sub-item1">
+                                                    <li class="sub-item1" v-for="a in item1"><a
+                                                            v-bind:href="a.url">{{a.sub}}</a></li>
+                                                </ul>
 
+                                            </div>
+                                        </div>
+                                        <div v-else-if="a.sub=='直播'">
+                                            <span class="left-new-icon"></span>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                搜索
+                            </div>
+                            <div>
+                                寻求报道
+                            </div>
+                            <div>
+                                我要入驻
+                            </div>
+                            <div>
+                                搜索
+                            </div>
+                            <div>
+                                寻求报道
+                            </div>
+                            <div>
+                                我要入驻
+                            </div>
+                            <div>
+                                搜索
+                            </div>
+                            <div>
+                                寻求报道
+                            </div>
+                            <div>
+                                我要入驻
+                            </div>
+                            <div>
+                                搜索
+                            </div>
+                            <div>
+                                寻求报道
+                            </div>
+                            <div>
+                                我要入驻
+                            </div>
+                            <div>
+                                搜索
+                            </div>
+                            <div>
+                                寻求报道
+                            </div>
+                            <div>
+                                我要入驻
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <div class="main-right-img">
+                    </div>
+                    <div class="main-right-content">
+                        <div class="right-home">
+                            <div class="right-home-top">
+                                <span>
+                                    商业策划
+                                </span>
+                                <div class="right-banner">
+                                    <a href="https://36kr.com/topics/1069689031796865" target="_blank"
+                                        rel="noopener noreferrer nofollow"><img src="image/right_banner.jpg" alt></a>
+                                </div>
+
+                            </div>
+                            <div class="right-home-banner clearfloat">
+                                <div class="right-home-banner-left">
+                                    <div class="banner-left-all">
+                                    <div class="banner-left-list">
+                                        <div class="bannerLeft" v-for="a in bannerLeft">
+                                            <div class="bannerLeft-list">
+                                                <div class="bannerLeft-item">
+                                                    <a v-bind:href="a.url"><img v-bind:src="a.img" v-bind:alt="a.text"></a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="left"></div>
+                                        <div class="right"></div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="right-home-banner-right">
+
+                                </div>
+
+                            </div>
+                            <div class="right-home-content clearfloat">
+                                <div class="right-home-content-all">
+                                    <div>最新文章</div>
+                                    <div class="right-home-content-list" v-for="a in text">
+                                        <div>
+                                            <a v-bind:href="a.url">
+                                                <img v-bind:src="a.img" alt>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-content-main">
+                        <div class="footer-content-first">
+                            <div>36氪</div>
+                            <div class="footer-content-first-li">
+                                <li>城市加盟</li>
+                                <li>寻求报道</li>
+                                <li>我要入驻</li>
+                                <li>投资者关系</li>
+                            </div>
+                            <div class="footer-content-first-li2">
+                                <li>商务合作</li>
+                                <li>关于我们</li>
+                                <li>联系我们</li>
+                                <li>加入我们</li>
+                            </div>
+                        </div>
+                        <div class="footer-content-second">
+                            <div>合作伙伴</div>
+                            <ul class="footer-content-second-style">
+                                <li><a href="https://www.aliyun.com/" target="_blank"
+                                        rel="noopener noreferrer nofollow">
+                                        <img src="image/aly.png" alt>
+                                    </a></li>
+                                <li><a href="https://www.volcengine.cn/">
+                                        <img src="image/hsyq.png" alt>
+                                    </a></li>
+                                <li><a href="https://www.upyun.com/">
+                                        <img src="image/ypy.png" alt>
+                                    </a></li>
+                                <li>
+                                    <a href="https://www.baidu.com">
+                                        <img src="image/gaudi.png" alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.teambition.com/?utm_source=36kr&utm_campaign=logo-brand">
+                                        <img src="image/teambition.png" alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.getui.com/">
+                                        <img src="image/getui.png" alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.odaily.com/">
+                                        <img src="image/dailyPlanet.png" alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.easemob.com/">
+                                        <img src="image/huanxin.png" alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.jingdata.com/">
+                                        <img src="image/jingzhun.png" alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.krspace.cn/">
+                                        <img src="image/ke.png " alt>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.futunn.com/">
+                                        <img src="image/ftnn.png" alt>
+                                    </a>
                                 </li>
                             </ul>
+
                         </div>
-                        <div>
-                            搜索
+                        <div class="footer-content-third">
+                            <div>36氪APP下载</div>
+                            <div class="footer-content-third-style">
+                                <img src="image/downCode.png" alt>
+                            </div>
+                            <div class="footer-content-third-area">iOS & Android</div>
+
                         </div>
-                        <div>
-                            寻求报道
-                        </div>
-                        <div>
-                            我要入驻
+                        <div class="footer-content-fourth">
+                            <div class="footer-content-fourth-logo">
+                                <a href="https://36kr.com/" target="_blank" rel="noopener noreferrer nofollow"> <img
+                                        src="image/36Krlogo.png" alt></a>
+                            </div>
+                            <div class="footer-content-fourth-center">
+                                <div class="footer-content-fourth-center-top">
+                                    本站由
+                                    <span><a href="https://www.aliyun.com/" target="_blank"
+                                            rel="noopener noreferrer nofollow">阿里云</a>提供计算与安全服务 违法和不良信息举报电话：010-58254120
+                                        举报邮箱：jubao@36kr.com
+                                        <a href="https://www.12377.cn/" target="_blank"
+                                            rel="noopener noreferrer nofollow">网上有害信息举报</a>
+                                    </span>
+                                </div>
+                                <div class="footer-content-fourth-center-bottom">
+                                    <span>© 2011~2018 北京多氪信息科技有限公司 | <a href="https://www.beian.miit.gov.cn/"
+                                            target="_blank" rel="noopener noreferrer nofollow">京ICP备12031756号</a> | <a
+                                            href="https://www.beian.miit.gov.cn/" target="_blank"
+                                            rel="noopener noreferrer nofollow">京ICP证150143号</a> | <a
+                                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502036099"
+                                            target="_blank"
+                                            rel="noopener noreferrer nofollow">京公网安备11010502036099号</a></span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="main-center">
 
             </div>
-            <div class="main-right">
-
-            </div>
-
-
-        </div>
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-content-main">
-                    <div class="footer-content-first">
-                        <div>36氪</div>
-                        <div class="footer-content-first-li">
-                            <li>城市加盟</li>
-                            <li>寻求报道</li>
-                            <li>我要入驻</li>
-                            <li>投资者关系</li>
-                        </div>
-                        <div class="footer-content-first-li2">
-                            <li>商务合作</li>
-                            <li>关于我们</li>
-                            <li>联系我们</li>
-                            <li>加入我们</li>
-                        </div>
-                    </div>
-                    <div class="footer-content-second">
-                        <div>合作伙伴</div>
-                        <ul class="footer-content-second-style">
-                            <li><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer nofollow">
-                                    <img src="image/aly.png" alt>
-                                </a></li>
-                            <li><a href="https://www.volcengine.cn/">
-                                    <img src="image/hsyq.png" alt>
-                                </a></li>
-                            <li><a href="https://www.upyun.com/">
-                                    <img src="image/ypy.png" alt>
-                                </a></li>
-                            <li>
-                                <a href="https://www.baidu.com">
-                                    <img src="image/gaudi.png" alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.teambition.com/?utm_source=36kr&utm_campaign=logo-brand">
-                                    <img src="image/teambition.png" alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.getui.com/">
-                                    <img src="image/getui.png" alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.odaily.com/">
-                                    <img src="image/dailyPlanet.png" alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.easemob.com/">
-                                    <img src="image/huanxin.png" alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.jingdata.com/">
-                                    <img src="image/jingzhun.png" alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.krspace.cn/">
-                                    <img src="image/ke.png " alt>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.futunn.com/">
-                                    <img src="image/ftnn.png" alt>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div class="footer-content-third">
-                        <div>36氪APP下载</div>
-                        <div class="footer-content-third-style">
-                            <img src="image/downCode.png" alt>
-                        </div>
-                        <div class="footer-content-third-area">iOS & Android</div>
-
-                    </div>
-                    <div class="footer-content-fourth">
-                        <div class="footer-content-fourth-logo">
-                            <a href="https://36kr.com/" target="_blank" rel="noopener noreferrer nofollow"> <img
-                                    src="image/36Krlogo.png" alt></a>
-                        </div>
-                        <div class="footer-content-fourth-center">
-                            <div class="footer-content-fourth-center-top">
-                                本站由
-                                <span><a href="https://www.aliyun.com/" target="_blank"
-                                        rel="noopener noreferrer nofollow">阿里云</a>提供计算与安全服务 违法和不良信息举报电话：010-58254120
-                                    举报邮箱：jubao@36kr.com
-                                    <a href="https://www.12377.cn/" target="_blank"
-                                        rel="noopener noreferrer nofollow">网上有害信息举报</a>
-                                </span>
-                            </div>
-                            <div class="footer-content-fourth-center-bottom">
-                                <span>© 2011~2018 北京多氪信息科技有限公司 | <a href="https://www.beian.miit.gov.cn/"
-                                        target="_blank" rel="noopener noreferrer nofollow">京ICP备12031756号</a> | <a
-                                        href="https://www.beian.miit.gov.cn/" target="_blank"
-                                        rel="noopener noreferrer nofollow">京ICP证150143号</a> | <a
-                                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502036099"
-                                        target="_blank"
-                                        rel="noopener noreferrer nofollow">京公网安备11010502036099号</a></span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
 
     </div>
@@ -741,7 +966,83 @@
                     "url": "https://36kr.com/local/jiangsu",
                     "sub": "城市"
                 }
-            ]
+            ],
+            bannerLeft: [{
+                    "img": "image/banner_left1.png",
+                    "url": "https://36kr.com/p/1105151315299072",
+                    "text": "智氪|从小灵通到新能源车，电子烟大佬的“动力神话”"
+                },
+                {
+                    "img": "image/banner_left2.jpg",
+                    "url": "https://36kr.com/p/1112180124067848",
+                    "text": "2020预亏4亿，新冠疫苗上市申请获受理，能否成为康希诺“千亿市值”支点"
+                },
+                {
+                    "img": "image/banner_left3.jpg",
+                    "url": "https://www.36dianping.com/article/topic/11",
+                    "text": "智氪|从小灵通到新能源车，电子烟大佬的“动力神话”"
+                },
+                {
+                    "img": "image/banner_left4.jpg",
+                    "url": "https://36kr.com/live/1109252258801666",
+                    "text": "比特币暴涨又暴跌，疯狂还能持续多久?"
+                },
+                {
+                    "img": "image/banner_left5.jpg",
+                    "url": "https://36kr.com/p/1112647004530692",
+                    "text": "跑步入场的新基民“跌妈不认”：每次打开软件都少几千"
+                },
+                {
+                    "img": "image/banner_left6.png",
+                    "url": "https://36kr.com/p/1103662326106629",
+                    "text": "活动预告 | “UNLEASH TOKYO” ：创新的东京召唤世界各地的创业者"
+                },
+
+
+            ],
+            bannerRight: [{
+                    "img": "image/banner_right1.jpg",
+                    "url": "https://36kr.com/p/1110662833219846",
+                    "text": "36氪首发 | 一年卖出1000多万盒米粉，「阳际山野」获千万元Pre-A轮融资"
+                },
+                {
+                    "img": "image/banner_right2.jpg",
+                    "url": "https://36kr.com/p/1112255743813635",
+                    "text": "36氪首发 | 从屠宰到零售只需4小时，鲜牛肉品牌「牛痴」获IDG资本数千万元天使轮融资"
+                },
+                {
+                    "img": "image/banner_right3.png",
+                    "url": "https://36kr.com/p/1111758317742345",
+                    "text": "36氪首发 | 「花点时间」完成亿元C1轮融资，累计发出鲜花超5亿⽀"
+                },
+                {
+                    "img": "image/banner_right4.png",
+                    "url": "https://36kr.com/p/1111128398178305",
+                    "text": "36氪首发 | 国产新型疫苗加速冲刺，「依生生物」获逾1.3亿美元B轮融资"
+                },
+
+            ],
+            text:[{
+                "img": "image/banner_right4.png",
+                    "url": "https://36kr.com/p/1111128398178305",
+                    "text": "在薇娅李佳琦直播间里买化妆品，真的便宜吗？"
+            },
+            {
+                "img": "image/banner_right4.png",
+                    "url": "https://36kr.com/p/1111128398178305",
+                    "text": "36氪首发 | 国产新型疫苗加速冲刺，「依生生物」获逾1.3亿美元B轮融资"
+            }        
+        ],
+            index: 0
+        },
+        methods:{
+            left:function(){
+                this.index--;
+            },
+            right:function(){
+                this.index++;
+                console.log(this.index)
+            }
         }
     })
 </script>
