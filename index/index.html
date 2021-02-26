@@ -326,7 +326,9 @@
         border-radius: 2px;
         position: relative;
     }
-    .right-home-banner-left:hover .left,.right{
+
+    .right-home-banner-left:hover .left,
+    .right {
         display: block;
     }
 
@@ -334,70 +336,315 @@
         float: right;
         width: 300px;
     }
-    .banner-left-all{
-        width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    }
-    .banner-left-list{
-        height: 100%;
-    margin-left: -100%;
-    position: absolute;
-    top: 0px;
-    width: 800%;
 
-    }
-
-    .bannerLeft{
-        height: 100%;
-    float: left;
-    width: 12.5%;
-    }
-    .bannerLeft-list{
-        height: 100%;
-    width: 720px;
-    float: left;
-    background: #fff;
-    transition: transform 1s;
-    border-radius: 2px;
-    overflow: hidden;
-    }
-    .bannerLeft-item{
-        height: 100%;
-    position: relative;
-    }
-    .bannerLeft-item img{
+    .banner-left-all {
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        position: relative;
     }
 
-    .right-home-content {}
-    .left{
+    .banner-left-list {
+        height: 100%;
+        margin-left: -100%;
+        position: absolute;
+        top: 0px;
+        width: 800%;
+
+    }
+
+    .bannerLeft {
+        height: 100%;
+        float: left;
+        width: 12.5%;
+    }
+
+    .bannerLeft-list {
+        height: 100%;
+        width: 720px;
+        float: left;
+        background: #fff;
+        transition: transform 1s;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .bannerLeft-item {
+        height: 100%;
+        position: relative;
+    }
+
+    .bannerLeft-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .right-home-content-all {
+        float: left;
+        width: 720px;
+    }
+
+    .right-home-content-list {}
+
+    .right-home-content-item {
+        margin-bottom: 30px;
+        width: 690px;
+    }
+
+    .right-home-content-item1 {
+        height: 144px;
+        position: relative;
+        display: block;
+    }
+
+    .right-home-content-item2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .right-home-content-item3 {
+        width: 100%;
+        height: 100%;
+        z-index: 102;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .right-home-content-item3-left {
+        float: left;
+        width: 216px;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 2px;
+        position: relative;
+        z-index: 10;
+        display: block;
+    }
+
+    .right-home-content-item3-family {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        z-index: 1;
+        border-radius: 1px;
+        padding: 0 10px;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #fff;
+        background: #373737;
+    }
+
+    .right-home-content-item3-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right-home-content-item3-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .right-home-content-item3-right {
+        float: left;
+        width: 454px;
+        height: 100%;
+        position: relative;
+        margin-left: 20px;
+    }
+
+    .right-home-content-item3-title {
+        margin-top: 8px;
+        max-height: 48px;
+        line-height: 24px;
+        overflow: hidden;
+
+    }
+
+    .right-home-content-item3-atitle {
+        font-size: 18px;
+        color: #262626;
+        text-align: justify;
+        transition: .5s;
+    }
+
+
+    .right-home-content-item3-int {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #787878;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: justify;
+        max-height: 40px;
+        overflow: hidden;
+    }
+
+    .right-home-content-item3-footer {
+        font-size: 12px;
+        line-height: 18px;
+        color: #a7a7a7;
+        position: absolute;
+        bottom: 2px;
+        width: 100%;
+        float: left;
+    }
+
+    .right-home-content-item3-theme {
+        padding-left: 2px;
+        padding-right: 6px;
+        color: blue;
+
+    }
+
+    .right-home-content-item3-author {
+        color: #787878;
+    }
+
+    .right-home-content-item3-footer span {
+        color: black;
+    }
+
+    .right-home-content-item-specific {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .specific-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 12px;
+        line-height: 34px;
+    }
+
+    .specific-recommend {
+        font-size: 24px;
+        color: #262626;
+        font-weight: 500;
+
+    }
+
+    .specific-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .specific-item {
+        width: 216px;
+        margin-right: 20px;
+    }
+
+    .specific-item-allList {
+        display: block;
+        height: 218px;
+    }
+
+    .specific-item-all {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .specific-item-content {
+        width: 100%;
+        height: 100%;
+        z-index: 102;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .specific-item-pic {
+        height: 144px;
+        border-radius: 2px 2px 0 0;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .specific-item-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .specific-item-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-image: linear-gradient(-180deg, transparent, rgba(0, 0, 0, .65) 97%);
+    }
+
+    .specific-item-title-p {
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 6px;
+        max-height: 36px;
+        position: absolute;
+        bottom: 10px;
+        overflow: hidden;
+        font-weight: 500;
+    }
+
+    .specific-item-desription {
+        height: 74px;
+        background: #edf1f4;
+        padding-top: 10px;
+        border-radius: 0 0 2px 2px;
+    }
+
+    .specific-item-desription p {
+        font-size: 13px;
+        color: #787878;
+        text-align: justify;
+        overflow: hidden;
+        height: 54px;
+        line-height: 18px;
+        padding: 0 15px;
+    }
+
+    .left {
         height: 40px;
-    width: 28px;
-    z-index: 10;
-    position: absolute;
-    top: 130px;
-    cursor: pointer;
-    display: none;
-    background: url(image/left.jpg) no-repeat 50%;
-    background-size: 246px 1012px;
-    background-position: 0 -904px;
-    left: 0;
+        width: 28px;
+        z-index: 10;
+        position: absolute;
+        top: 130px;
+        cursor: pointer;
+        display: none;
+        background: url(image/left.jpg) no-repeat 50%;
+        background-size: 246px 1012px;
+        background-position: 0 -904px;
+        left: 0;
     }
-    .right{
+
+    .right {
         background: url(image/right.jpg) no-repeat 50%;
-    background-size: 246px 1012px;
-    background-position: 0 -944px;
-    right: 0;
-    height: 40px;
-    width: 28px;
-    z-index: 10;
-    position: absolute;
-    top: 130px;
-    cursor: pointer;
-    display: none;
+        background-size: 246px 1012px;
+        background-position: 0 -944px;
+        right: 0;
+        height: 40px;
+        width: 28px;
+        z-index: 10;
+        position: absolute;
+        top: 130px;
+        cursor: pointer;
+        display: none;
     }
 
 
@@ -539,7 +786,6 @@
         color: #aaaaaa;
     }
 
-
     a {
         text-decoration: none;
     }
@@ -665,53 +911,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div>
-                                搜索
-                            </div>
-                            <div>
-                                寻求报道
-                            </div>
-                            <div>
-                                我要入驻
-                            </div>
-                            <div>
-                                搜索
-                            </div>
-                            <div>
-                                寻求报道
-                            </div>
-                            <div>
-                                我要入驻
-                            </div>
-                            <div>
-                                搜索
-                            </div>
-                            <div>
-                                寻求报道
-                            </div>
-                            <div>
-                                我要入驻
-                            </div>
-                            <div>
-                                搜索
-                            </div>
-                            <div>
-                                寻求报道
-                            </div>
-                            <div>
-                                我要入驻
-                            </div>
-                            <div>
-                                搜索
-                            </div>
-                            <div>
-                                寻求报道
-                            </div>
-                            <div>
-                                我要入驻
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -733,19 +932,20 @@
                             <div class="right-home-banner clearfloat">
                                 <div class="right-home-banner-left">
                                     <div class="banner-left-all">
-                                    <div class="banner-left-list">
-                                        <div class="bannerLeft" v-for="a in bannerLeft">
-                                            <div class="bannerLeft-list">
-                                                <div class="bannerLeft-item">
-                                                    <a v-bind:href="a.url"><img v-bind:src="a.img" v-bind:alt="a.text"></a>
+                                        <div class="banner-left-list">
+                                            <div class="bannerLeft" v-for="a in bannerLeft">
+                                                <div class="bannerLeft-list">
+                                                    <div class="bannerLeft-item">
+                                                        <a v-bind:href="a.url"><img v-bind:src="a.img"
+                                                                v-bind:alt="a.text"></a>
+                                                    </div>
                                                 </div>
+
                                             </div>
-                                            
+                                            <div class="left"></div>
+                                            <div class="right"></div>
                                         </div>
-                                        <div class="left"></div>
-                                        <div class="right"></div>
                                     </div>
-                                </div>
                                 </div>
                                 <div class="right-home-banner-right">
 
@@ -755,13 +955,102 @@
                             <div class="right-home-content clearfloat">
                                 <div class="right-home-content-all">
                                     <div>最新文章</div>
-                                    <div class="right-home-content-list" v-for="a in text">
-                                        <div>
-                                            <a v-bind:href="a.url">
-                                                <img v-bind:src="a.img" alt>
-                                            </a>
-                                        </div>
+                                    <div class="right-home-content-list">
 
+                                        <div class="right-home-content-item" v-for="(a,key) in text">
+                                            <div v-if="key=='4'" class="right-home-content-item-specific">
+
+                                                <div class="specific-title">
+                                                    <span class="specific-recommend">专题推荐</span>
+                                                    <a href="https://www.baidu.com">查看更多</a>
+                                                </div>
+                                                <ul class="specific-list">
+                                                    <li class="specific-item" v-for="a in specific">
+                                                        <div class="specific-item-allList">
+
+
+                                                            <div class="specific-item-all">
+                                                                <div class="specific-item-content">
+                                                                    <div class="specific-item-pic">
+                                                                        <a v-bind:href="a.url"
+                                                                            class="specific-item-img"><img
+                                                                                v-bind:src="a.img" alt></a>
+                                                                        <div class="specific-item-title">
+                                                                            <p class="specific-item-title-p">{{a.title}}
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="specific-item-desription">
+                                                                        <a v-bind:href="a.url">
+                                                                            <p>{{a.int}}</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+
+                                                    </li>
+
+                                                </ul>
+
+
+                                            </div>
+                                            <div v-else-if="key=='13'">
+                                                <div class="right-home-content-item-video">
+                                                    <div class="recommend-video">
+
+                                                    </div>
+                                                    <div class="recommend-video-content">
+                                                        <ul class="video-list">
+                                                            <li class="video-item">
+
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right-home-content-item1" v-else>
+                                                <div class="right-home-content-item2">
+                                                    <div class="right-home-content-item3">
+
+                                                        <div class="right-home-content-item3-left">
+                                                            <a v-bind:href="a.urlFamily"
+                                                                class="right-home-content-item3-family">
+                                                                {{a.family}}
+                                                            </a>
+                                                            <a v-bind:href="a.url" class="right-home-content-item3-img">
+                                                                <img v-bind:src="a.img" alt>
+                                                            </a>
+                                                        </div>
+                                                        <div class="right-home-content-item3-right">
+
+                                                            <p class="right-home-content-item3-title"><a
+                                                                    v-bind:href="a.url"
+                                                                    class="right-home-content-item3-atitle">{{a.title}}</a>
+                                                            </p>
+
+                                                            <a v-bind:href="a.url">
+                                                                <p class="right-home-content-item3-int">{{a.int}}</p>
+                                                            </a>
+                                                            <div class="right-home-content-item3-footer">
+                                                                <span>来自主题：<span>
+                                                                        <a v-bind:href="a.urlTheme"
+                                                                            class="right-home-content-item3-theme">{{a.theme}}</a>
+                                                                        <span>|</span>
+                                                                        <a v-bind:href="a.urlAuthor"
+                                                                            class="right-home-content-item3-author">{{a.author}}</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
 
@@ -1022,28 +1311,398 @@
                 },
 
             ],
-            text:[{
-                "img": "image/banner_right4.png",
-                    "url": "https://36kr.com/p/1111128398178305",
-                    "text": "在薇娅李佳琦直播间里买化妆品，真的便宜吗？"
-            },
-            {
-                "img": "image/banner_right4.png",
-                    "url": "https://36kr.com/p/1111128398178305",
-                    "text": "36氪首发 | 国产新型疫苗加速冲刺，「依生生物」获逾1.3亿美元B轮融资"
-            }        
-        ],
-            index: 0
+            text: [{
+                    "img": "image/main/main1.jpg",
+                    "url": "https://36kr.com/p/1114458245982211",
+                    "family": "科技",
+                    "title": "硅谷没有996，但打工人还是打工人",
+                    "int": "“硅谷只是任何一个美国式资本巨头的翻版，不同的是它更加快速地迭代。”",
+                    "theme": "硅谷前沿资讯",
+                    "author": "20社",
+                    "urlFamily": "https://36kr.com/information/technology",
+                    "urlTheme": "https://36kr.com/motif/327687520257",
+                    "urlAuthor": "https://36kr.com/user/5356615"
+
+
+                },
+                {
+                    "img": "image/main/main2.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main3.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main4.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main5.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main6.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main7.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main8.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main9.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main10.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main11.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main12.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main13.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main14.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main15.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main16.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main17.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main18.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main19.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main20.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main21.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main22.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main23.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+                    "img": "image/main/main24.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "family": "推荐",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。",
+                    "theme": "商业人物追踪",
+                    "author": "智架网",
+                    "urlFamily": "https://36kr.com/information/web_recommend",
+                    "urlTheme": "https://36kr.com/motif/327687618561",
+                    "urlAuthor": "https://36kr.com/user/310112"
+
+                }
+            ],
+            specific: [{
+                    "img": "image/main/specific.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+                {
+                    "img": "image/main/specific.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+                {
+                    "img": "image/main/specific.jpg",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+            ],
+            video: [{
+                    "img": "image/main/main24.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+                {
+                    "img": "image/main/main24.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+                {
+                    "img": "image/main/main24.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+                {
+                    "img": "image/main/main24.png",
+                    "url": "https://36kr.com/p/1114471982409988",
+                    "urlMore": "https://36kr.com/p/1114471982409988",
+                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
+                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
+                },
+            ],
+            index: 0,
+            total: 0
         },
-        methods:{
-            left:function(){
+        methods: {
+            left: function () {
                 this.index--;
             },
-            right:function(){
+            right: function () {
                 this.index++;
                 console.log(this.index)
             }
+        },
+        computed: {
+            
+            site: {
+                // getter
+                get: function () {
+                    return this.total
+                },
+                // setter
+                set: function (newValue) {
+                    var value=this.newValue
+                    this.total=value+1
+                }
+            }
         }
+
     })
 </script>
 
