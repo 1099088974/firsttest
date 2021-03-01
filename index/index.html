@@ -15,103 +15,99 @@
         min-width: 1280px;
         margin: 0 auto;
     }
+    .head{
+        width: 1170px;
+    margin: 44px auto 0;
+    }
 
     .header {
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 44px;
-        width: 100%;
-        line-height: 44px;
-        background: #3b3b3b;
-
-        font-size: 15px;
+        position: fixed;
+    top: 0;
+    left: 0;
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    background: #3b3b3b;
+    z-index: 1000;
     }
 
     .header-all {
-        width: 1280px;
-        margin: 0 auto;
+        width: 1170px;
+    padding-left: 140px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    z-index: 104;
     }
 
     .header-all-content {
-        margin-left: 195px;
-        width: 1030px;
+        text-align: right;
+    margin: 0 auto;
+    width: 1030px;
+    height: 100%;
     }
 
     .header-main {
+    
+    }
+
+
+    .header-main-list {
         float: left;
-        height: 100%;
+    height: 100%;
     }
 
-
-    .header-main-first {
-        position: relative;
-        display: inline-block;
-        width: 120px;
-        text-align: center;
+    .header-main-item {
+        float: left;
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
     }
-
-    .header-main-first-content {
-        font-size: 13px;
-        display: none;
+    .header-main-itemAll{
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 120px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    top: 0;
+    width: 120px;
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 10%);
+    transition-property: all;
+    transform-origin: top;
+    }
+    .header-main-sub{
+        height: 38px;
+    line-height: 38px;
+    border-top: 1px solid #f2f2f2;
+    
+
     }
 
-    .header-main-first-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .header-main-first-content a:hover {
-        background-color: #f1f1f1;
-    }
-
-    .header-main-first:hover .header-main-first-content {
-        display: block;
-    }
-
-    .header-main-second {
+    .header-main-sub-a {
         position: relative;
-        display: inline-block;
-        width: 120px;
-        text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    color: #262626;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
     }
-
-    .header-main-third {
+    .header-main-sub-a span{
         position: relative;
-        display: inline-block;
-        width: 120px;
-        text-align: center;
     }
-
-    .header-main-fourth {
+    .header-main-title{
         position: relative;
-        display: inline-block;
-        width: 120px;
-        text-align: center;
+    width: 100%;
+    z-index: 100;
+    background-color: #3b3b3b;
+    transition: background-color .5s;
+    cursor: pointer;
     }
-
-    .header-main-fifth {
+    .header-main-title span{
         position: relative;
-        display: inline-block;
-        width: 120px;
-        text-align: center;
     }
 
-    .header-main-sixth {
-        position: relative;
-        display: inline-block;
-        width: 120px;
-        text-align: center;
-    }
-
-    .a,
-    span {
+    .a,span {
         color: white;
         margin: 0;
         padding: 0;
@@ -126,14 +122,12 @@
         box-sizing: border-box;
     }
 
-    .space {
-        display: inline-block;
-    }
 
-    .space a {
-        display: inline-block;
+    .space{
+        display: block;
         width: 90px;
         height: 22px;
+        float: left;
         background-image: url(image/clear.png);
         background-size: 100%;
         background-repeat: no-repeat;
@@ -152,6 +146,9 @@
         width: 80px;
         text-align: center;
     }
+
+
+
 
     .main {
         width: 1170px;
@@ -619,6 +616,110 @@
         padding: 0 15px;
     }
 
+
+
+    .video-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 12px;
+        line-height: 34px;
+    }
+
+    .video-recommend {
+        font-size: 24px;
+        color: #262626;
+        font-weight: 500;
+
+    }
+
+    .video-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .video-item {
+        width: 216px;
+        margin-right: 20px;
+    }
+
+    .video-item-allList {
+        display: block;
+        height: 218px;
+    }
+
+    .video-item-all {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .video-item-content {
+        width: 100%;
+        height: 100%;
+        z-index: 102;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .video-item-pic {
+        height: 104px;
+        border-radius: 2px 2px 0 0;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .video-item-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-item-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-image: linear-gradient(-180deg, transparent, rgba(0, 0, 0, .65) 97%);
+    }
+
+    .video-item-title-p {
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 6px;
+        max-height: 36px;
+        position: absolute;
+        bottom: 10px;
+        overflow: hidden;
+        font-weight: 500;
+    }
+
+    .video-item-desription {
+        height: 74px;
+        background: #edf1f4;
+        padding-top: 10px;
+        border-radius: 0 0 2px 2px;
+    }
+
+    .video-item-desription p {
+        font-size: 13px;
+        color: #787878;
+        text-align: justify;
+        overflow: hidden;
+        height: 54px;
+        line-height: 18px;
+        padding: 0 15px;
+    }
+
+
     .left {
         height: 40px;
         width: 28px;
@@ -823,56 +924,49 @@
 <body>
     <div id="app">
         <div class="all">
+            <div class="head clearfloat">
             <div class="header">
                 <div class="header-all">
 
 
                     <div class="header-all-content">
-                        <div class="header-main">
-                            <div class="header-main-first">
-                                <span>媒体品牌</span>
-                                <div class="header-main-first-content">
-                                    <a
-                                        href="https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png">未来汽车日报</a>
-                                    <a
-                                        href="https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg">未来消费</a>
-                                    <a href="https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png">未来地产</a>
-                                    <a href="http://letschuhai.com">36氪出海</a>
-                                    <a href="https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png">Tech星球</a>
-                                    <a href="https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png">超人测评</a>
-                                </div>
-                            </div>
-                            <div class="header-main-second">
-                                <span>企业服务</span>
-                            </div>
-                            <div class="header-main-third">
-                                <span>政府服务</span>
-                            </div>
-                            <div class="header-main-fourth">
-                                <span>投资人服务</span>
-                            </div>
-                            <div class="header-main-fifth">
-                                <span>创业者服务</span>
-                            </div>
-                            <div class="header-main-sixth">
-                                <span>会员服务</span>
-                            </div>
-                        </div>
-
                         <div class="user-login">
                             <span class="user-login-icon"></span>
                             <span class="user-login-text">登录</span>
                         </div>
-                        <div class="header-search">
+                        <div class="header-search clearfloat">
                             <span class="search-icon"></span>
                             <span class="search-text">搜索</span>
                         </div>
-                        <div class="space"> <a href="https://36kr.com/topics/799051634713857" target="_blank"
-                                rel="noopener noreferrer"></a></div>
+                        <div class="header-main" >
+                            <ul class="header-main-list" > 
+                                <li class="header-main-item" v-for="a in headerList">
+                                    <div class="header-main-itemAll" style="    transform: scaleY(0.16666666666666666);
+                                    transition-duration: 0.5s;">
+                                        <div class="header-main-sub" v-for="b in a.item">
+                                            <a v-bind:href="b.url" class="header-main-sub-a">
+                                                <span>{{b.item}}</span>
+                                            </a>
+                                        </div>
+                                </div>
+                                    <div class="header-main-title">
+                                        <span>{{a.title}}</span>
+                                    </div>
+                                
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+
+                        <a href="https://36kr.com/topics/799051634713857" target="_blank"
+                                rel="noopener noreferrer" class="space"></a>
 
                     </div>
                 </div>
             </div>
+        </div>
             <div class="main clearfloat">
                 <div class="main-left">
                     <div class="main-left-first">
@@ -967,8 +1061,6 @@
                                                 <ul class="specific-list">
                                                     <li class="specific-item" v-for="a in specific">
                                                         <div class="specific-item-allList">
-
-
                                                             <div class="specific-item-all">
                                                                 <div class="specific-item-content">
                                                                     <div class="specific-item-pic">
@@ -999,20 +1091,41 @@
 
 
                                             </div>
-                                            <div v-else-if="key=='13'">
-                                                <div class="right-home-content-item-video">
-                                                    <div class="recommend-video">
-
-                                                    </div>
-                                                    <div class="recommend-video-content">
-                                                        <ul class="video-list">
-                                                            <li class="video-item">
-
-                                                            </li>
-
-                                                        </ul>
-                                                    </div>
+                                            <div v-else-if="key=='13'" class="right-home-content-item-video">
+                                                <div class="video-title">
+                                                    <span class="video-recommend">视频推荐</span>
+                                                    <a href="https://www.baidu.com">查看更多</a>
                                                 </div>
+                                                <ul class="video-list">
+                                                    <li class="video-item"  v-for="a in video">
+                                                        <div class="video-item-allList">
+
+
+                                                            <div class="video-item-all">
+                                                                <div class="video-item-content">
+                                                                    <div class="video-item-pic">
+                                                                        <a v-bind:href="a.url"
+                                                                            class="video-item-img"><img
+                                                                                v-bind:src="a.img" alt></a>
+                                                                        <div class="video-item-title">
+                                                                            <p class="video-item-title-p">{{a.title}}
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="video-item-desription">
+                                                                        <a v-bind:href="a.url">
+                                                                            <p>{{a.int}}</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
                                             </div>
                                             <div class="right-home-content-item1" v-else>
                                                 <div class="right-home-content-item2">
@@ -1365,6 +1478,12 @@
 
                 },
                 {
+   
+                    "title": "专题推荐"
+
+
+                },
+                {
                     "img": "image/main/main5.jpg",
                     "url": "https://36kr.com/p/1114471982409988",
                     "family": "推荐",
@@ -1466,6 +1585,12 @@
                     "urlFamily": "https://36kr.com/information/web_recommend",
                     "urlTheme": "https://36kr.com/motif/327687618561",
                     "urlAuthor": "https://36kr.com/user/310112"
+
+                },
+                {
+
+                    "title": "视频推荐"
+
 
                 },
                 {
@@ -1674,14 +1799,183 @@
                     "urlMore": "https://36kr.com/p/1114471982409988",
                     "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
                     "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
-                },
-                {
-                    "img": "image/main/main24.png",
-                    "url": "https://36kr.com/p/1114471982409988",
-                    "urlMore": "https://36kr.com/p/1114471982409988",
-                    "title": "30个「前」百度人，打下了中国自动驾驶半壁江山",
-                    "int": "多年之后复盘中国自动驾驶发展历程，百度之外，人们或许还该记得那些为自动驾驶事业努力过的百度人们。"
                 }
+            ],
+            headerList:[
+                {
+                "title": "媒体品牌",
+                item:[
+                {
+                "url": "https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png",
+                "item":"未来汽车日报"
+            },
+            {
+                "url": "https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg",
+                "item":"未来消费"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png",
+                "item":"未来地产"
+            },
+            {
+                "url": "http://letschuhai.com",
+                "item":"36氪出海"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png",
+                "item":"Tech星球"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png",
+                "item":"超人测评"
+            }
+                ]
+            },
+            {
+                "title": "企业服务",
+                item:[
+                {
+                "url": "https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png",
+                "item":"未来汽车日报"
+            },
+            {
+                "url": "https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg",
+                "item":"未来消费"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png",
+                "item":"未来地产"
+            },
+            {
+                "url": "http://letschuhai.com",
+                "item":"36氪出海"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png",
+                "item":"Tech星球"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png",
+                "item":"超人测评"
+            }
+                ]
+            },
+            {
+                "title": "政府服务",
+                item:[
+                {
+                "url": "https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png",
+                "item":"未来汽车日报"
+            },
+            {
+                "url": "https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg",
+                "item":"未来消费"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png",
+                "item":"未来地产"
+            },
+            {
+                "url": "http://letschuhai.com",
+                "item":"36氪出海"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png",
+                "item":"Tech星球"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png",
+                "item":"超人测评"
+            }
+                ]
+            },
+            {
+                "title": "投资人服务",
+                item:[
+                {
+                "url": "https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png",
+                "item":"未来汽车日报"
+            },
+            {
+                "url": "https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg",
+                "item":"未来消费"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png",
+                "item":"未来地产"
+            },
+            {
+                "url": "http://letschuhai.com",
+                "item":"36氪出海"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png",
+                "item":"Tech星球"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png",
+                "item":"超人测评"
+            }
+                ]
+            },
+            {
+                "title": "创业者服务",
+                item:[
+                {
+                "url": "https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png",
+                "item":"未来汽车日报"
+            },
+            {
+                "url": "https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg",
+                "item":"未来消费"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png",
+                "item":"未来地产"
+            },
+            {
+                "url": "http://letschuhai.com",
+                "item":"36氪出海"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png",
+                "item":"Tech星球"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png",
+                "item":"超人测评"
+            }
+                ]
+            },
+            {
+                "title": "会员服务",
+                item:[
+                {
+                "url": "https://img.36krcdn.com/20200523/v2_60978139c1384260a7356df795ceaad7_img_png",
+                "item":"未来汽车日报"
+            },
+            {
+                "url": "https://img.36krcdn.com/20201027/v2_f941a0b8255c4d42836e27cd8a1c9bfc_img_jpg",
+                "item":"未来消费"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/n7xtn94vwued8chj.png",
+                "item":"未来地产"
+            },
+            {
+                "url": "http://letschuhai.com",
+                "item":"36氪出海"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/12033939/1diq5xjeaxbz7q2l.png",
+                "item":"Tech星球"
+            },
+            {
+                "url": "https://pic.36krcnd.com/201909/11105748/fmgji9gmg0kjrccq.png",
+                "item":"超人测评"
+            }
+                ]
+            }
             ],
             index: 0,
             total: 0
