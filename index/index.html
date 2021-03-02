@@ -17,11 +17,11 @@
     }
     .head{
         width: 1170px;
-    margin: 44px auto 0;
+        margin: 44px auto 0;
     }
 
     .header {
-        position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     height: 44px;
@@ -54,8 +54,10 @@
 
 
     .header-main-list {
+        margin: 0;
+        padding: 0;
         float: left;
-    height: 100%;
+        height: 100%;
     }
 
     .header-main-item {
@@ -66,21 +68,21 @@
     color: #fff;
     }
     .header-main-itemAll{
+        display: none;
         position: absolute;
-    opacity: 0;
-    top: 0;
     width: 120px;
     background-color: #fff;
     box-shadow: 0 0 6px 0 rgb(0 0 0 / 10%);
     transition-property: all;
     transform-origin: top;
     }
+    .header-main-item:hover .header-main-itemAll{
+        display: block;
+    }
     .header-main-sub{
         height: 38px;
     line-height: 38px;
     border-top: 1px solid #f2f2f2;
-    
-
     }
 
     .header-main-sub-a {
@@ -93,12 +95,12 @@
     height: 100%;
     }
     .header-main-sub-a span{
+        color: black;
         position: relative;
     }
     .header-main-title{
         position: relative;
     width: 100%;
-    z-index: 100;
     background-color: #3b3b3b;
     transition: background-color .5s;
     cursor: pointer;
@@ -137,14 +139,43 @@
 
     .header-search {
         float: right;
-        width: 80px;
-        text-align: center;
+    }
+    .header-search-button{
+        float: right;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    cursor: pointer;
+    }
+    .search-icon{
+        position: relative;
+    display: inline-block;
+    top: 2px;
+    padding: 7px;
+    width: 14px;
+    height: 14px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAA4klEQVR42sWUKw6EMBCGAYXAoLkBx+AkeExtD8MVloNgMXgchgSF+jZ0Z0UXWh4h2ZF/50vnHQR/N1JKGnpmZnoaStJjKEYz8WsTmtiHZbS4rCVzY4M4dShyEhJyFJ2owy5KLL8tVETWS0TFIr9uA0YLVuxGUwiqt5X8lKRy5l9JmewKU0pukROMJNfSlhsjKm+rlPFpbLE3Yu4Fc+PT2+JsxMQLJsZnfgi8Her54rweasfdAbg9cieHfNzdysO1Wq0mvLrIox/1nA5qL+o+VoSHqLMlz6BXr+4Xra8f7BWtCd+hCe/il3O+fgAAAABJRU5ErkJggg==) no-repeat;
+    background-size: 100%;
+    }
+    .search-text{
+        padding-left: 5px;
+        font-weight: 500;
     }
 
     .user-login {
         float: right;
-        width: 80px;
-        text-align: center;
+    height: 44px;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    }
+    .user-login-text{
+        font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 42px;
     }
 
 
@@ -161,21 +192,24 @@
         min-height: 600px;
         float: left;
         position: relative;
+        
 
     }
 
-    .main-left .main-left-first {
-        position: absolute;
+    .main-left-first {
+        position: fixed;
+        width: 1170px;
+    height: 0;
+    margin: auto;
     }
 
-    .main-left .main-left-first .main-left-second {
+    .main-left-second {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 125px;
-        padding-right: 25px;
-        padding-top: 30px;
-        z-index: 10001;
+    top: 0;
+    left: -25px;
+    width: 125px;
+    padding-top: 30px;
+    z-index: 10001;
     }
 
 
@@ -189,10 +223,20 @@
         background-position: 0 0;
     }
 
-    .main-left-list {
-        transition: all 1s;
-        opacity: 1;
+    .main-left-listAll{
+       padding:0;
+       margin: 0;
 
+    }
+    .main-left-content-item{
+        padding: 1px 7px;
+    color: #262626;
+    border-radius: 1px;
+    position: relative;
+    right: -7px;
+    display: inline-block;
+    height: 27px;
+    line-height: 26px;
     }
 
     .main-left-line {
@@ -203,8 +247,8 @@
         margin-top: 13px;
     }
 
-    .main-left-listAll {
-        padding-top: 41px;
+    .main-left-list {
+        padding-top: 38px;
         position: relative;
     }
 
@@ -218,6 +262,9 @@
         position: absolute;
         right: 41px;
         top: 444px;
+    }
+    .main-left-content{
+        position: relative;
     }
 
     .main-left-item {
@@ -238,22 +285,26 @@
         margin-right: 4px;
     }
 
-    .left-sub {
+    .main-left-sub-list {
         transition: all .5s linear;
-        overflow: hidden;
-        max-height: 0;
-        width: 220px;
-        margin-left: -40px;
+    overflow: hidden;
+    max-height: 0;
+    width: 140px;
+    margin-left: -20px;
 
     }
 
     .main-left-sub-item1 {
         float: right;
         width: 48px;
-        margin-right: 16px;
+        margin-right: 20px;
+        margin: 0;
+        padding:0;
     }
 
     .main-left-sub-item2 {
+        margin: 0;
+        padding:0;
         float: right;
         width: 48px;
         margin-right: 16px;
@@ -263,13 +314,113 @@
         height: 32px;
         line-height: 32px;
         font-size: 16px;
+        text-align: center;
+    position: relative;
+        
+    }
+    .sub-item1 a{
+        color: #787878;
+       position: absolute;
+    display: block;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    .sub-item2 a{
+        color: #787878;
+        position: absolute;
+    display: block;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
     }
 
     .sub-item2 {
         height: 32px;
         line-height: 32px;
         font-size: 16px;
+        text-align: center;
+    position: relative;
     }
+
+    .main-search{
+        padding-top: 16px;
+    padding-bottom: 18px;
+   
+    }
+    .main-search-button{
+        padding-left: 5px;
+        width: 62px;
+    height: 48px;
+    line-height: 46px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    }
+    .main-search-icon{
+        position: relative;
+    display: inline-block;
+    top: 3px;
+    padding: 9px;
+    background: url(image/home.png) no-repeat;
+    background-size: 246px 1012px;
+    background-position: 0 -60px;
+    }
+    .main-search-text{
+        color: black;
+        float: right;
+        padding-left: 8px;
+        font-weight: 500;
+    }
+
+    .main-report{
+        width: 94px;
+    float: right;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    border: 1px solid #4285f4;
+    margin-bottom: 10px;
+    }
+    .main-report-icon{
+        display: inline-block;
+    padding: 7px;
+    background: url(image/home.png) no-repeat;
+    background-size: 246px 1012px;
+    background-position: 0 -78px;
+    position: relative;
+    top: 2px;
+    }
+    .main-report-text{
+        padding-left: 4px;
+    color: #4285f4;
+    }
+    .main-want{
+        width: 94px;
+    float: right;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 26px;
+    border: 1px solid #4387f4;
+    margin-bottom: 10px;
+    cursor: pointer;
+    }
+    .main-want-icon{
+        display: inline-block;
+    padding: 7px;
+    background: url(image/home.png) no-repeat;
+    background-size: 246px 1012px;
+    background-position: 0 -876px;
+    position: relative;
+    top: 2px;
+    }
+    .main-want-text{
+        padding-left: 4px;
+    color: #4285f4;
+    }
+
 
     .main-right {
         width: 1030px;
@@ -891,8 +1042,7 @@
         text-decoration: none;
     }
 
-    ol,
-    ul {
+    ol,ul {
         list-style: none;
     }
 
@@ -928,21 +1078,21 @@
             <div class="header">
                 <div class="header-all">
 
-
                     <div class="header-all-content">
                         <div class="user-login">
-                            <span class="user-login-icon"></span>
                             <span class="user-login-text">登录</span>
                         </div>
                         <div class="header-search clearfloat">
-                            <span class="search-icon"></span>
-                            <span class="search-text">搜索</span>
+                            <div class="header-search-button">
+                                <span class="search-icon"></span>
+                                <span class="search-text">搜索</span>
+                            </div>
+                            
                         </div>
                         <div class="header-main" >
                             <ul class="header-main-list" > 
                                 <li class="header-main-item" v-for="a in headerList">
-                                    <div class="header-main-itemAll" style="    transform: scaleY(0.16666666666666666);
-                                    transition-duration: 0.5s;">
+                                    <div class="header-main-itemAll">
                                         <div class="header-main-sub" v-for="b in a.item">
                                             <a v-bind:href="b.url" class="header-main-sub-a">
                                                 <span>{{b.item}}</span>
@@ -976,16 +1126,17 @@
                                 </div>
                             </a>
 
-                            <div class="main-left-list clearfloat">
+                            <div class="main-left-listAll clearfloat">
                                 <div class="main-left-line">
                                 </div>
-                                <ul class="main-left-listAll">
+                                <ul class="main-left-list">
                                     <li class="main-left-item" v-for="a in articles">
-                                        <div class="main-left-sub"><a v-bind:href="a.url">{{a.sub}}</a>
-                                        </div>
                                         <div v-if="a.sub=='资讯'">
+                                            <div class="main-left-content">
                                             <span class="left-open-icon"></span>
-                                            <div class="left-sub open">
+                                            <a v-bind:href="a.url" class="main-left-content-item">{{a.sub}}</a>
+                                        </div>
+                                            <div class="main-left-sub-list  open">
                                                 <ul class="main-left-sub-item2">
                                                     <li class="sub-item2" v-for="a in item2">
                                                         <a v-bind:href="a.url">{{a.sub}}</a>
@@ -998,12 +1149,30 @@
 
                                             </div>
                                         </div>
-                                        <div v-else-if="a.sub=='直播'">
+                                        <div v-else-if="a.sub=='直播'" class="main-left-content">
                                             <span class="left-new-icon"></span>
+                                            <a v-bind:href="a.url" class="main-left-content-item">{{a.sub}}</a>
+                                        </div>
+                                        <div class="main-left-content" v-else>
+                                            <a v-bind:href="a.url" class="main-left-content-item">{{a.sub}}</a>
                                         </div>
 
                                     </li>
                                 </ul>
+                                <div class="main-search clearfloat">
+                                    <div class="main-search-button">
+                                        <span class="main-search-icon"></span>
+                                        <span class="main-search-text">搜索</span>
+                                    </div>                                    
+                                </div>
+                                <a href="https://www.baidu.com" class="main-report">
+                                    <span class="main-report-icon"></span>
+                                        <span class="main-report-text">寻求报道</span>
+                                </a>
+                                <div class="main-want">
+                                    <span class="main-want-icon"></span>
+                                    <span class="main-want-text">我要入驻</span>
+                                </div>
                             </div>
                         </div>
                     </div>
