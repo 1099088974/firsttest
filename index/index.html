@@ -346,6 +346,7 @@
     .main-search{
         padding-top: 16px;
     padding-bottom: 18px;
+    padding-left: 55px;
    
     }
     .main-search-button{
@@ -899,6 +900,53 @@
         display: none;
     }
 
+    .right-home-banner-right{
+    }
+    .banner-right-list{
+        padding: 0;
+        margin: 0;
+        float: right;
+    width: 300px;
+    }
+    .banner-right-item{
+        float: left;
+    position: relative;
+    height: 145px;
+    width: 145px;
+    overflow: hidden;
+    border-radius: 2px;
+    }
+    .banner-right-item-pic{
+        height: 100%;
+
+    }
+    .banner-right-item-pic img{
+
+        width: 100%;
+    height: 100%;
+    }
+    .banner-right-item-text{
+        position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+-180deg
+,hsla(0,0%,74.9%,0),rgba(0,0,0,.78) 97%);
+    }
+    .banner-right-item-text p{
+        font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    text-align: justify;
+    padding: 0 10px;
+    max-height: 36px;
+    position: absolute;
+    bottom: 6px;
+    overflow: hidden;
+    }
+
 
     .footer {
         color: white;
@@ -1211,6 +1259,20 @@
                                     </div>
                                 </div>
                                 <div class="right-home-banner-right">
+                                    <ul class="banner-right-list">
+                                        <li class="banner-right-item" v-for="a in bannerRight" v-bind:style="a.style">
+                                            <a v-bind:href="a.url">
+                                            <div class="banner-right-item-pic">
+                                            <img v-bind:src="a.img">
+                                            
+                                            <div class="banner-right-item-text">
+                                                <p>{{a.text}}</p>
+                                            </div>
+                                        </div>
+                                        </a>
+
+                                        </li>
+                                    </ul>
 
                                 </div>
 
@@ -1335,7 +1397,99 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="right-home-rightcontent clearfloat">
+                                    <div class="latestnews">
+                                    <div class="latestnews-title">
+                                        最新快讯
+                                    </div>
+                                    <ul class="latestnews-list">
+                                        <li class="latestnews-item" v-for="a in latestNews">
+                                            <div>{{a.text}}</div>
+                                            <div>{{a.textMore}}</div>
+                                            </li>
+                                    </ul>
+                                    <div class="latestnews-more">
+                                        <a href="https://36kr.com/newsflashes">查看更多</a>
+                                    </div>
+                                </div>
 
+                                <div class="2">
+                                    <div>推荐直播</div>
+                                    <ul class="banner-right-list">
+                                        <li class="banner-right-item" v-for="a in bannerRight" v-bind:style="a.style">
+                                            <a v-bind:href="a.url">
+                                            <div class="banner-right-item-pic">
+                                            <img v-bind:src="a.img">
+                                            
+                                            <div class="banner-right-item-text">
+                                                <p>{{a.text}}</p>
+                                            </div>
+                                        </div>
+                                        </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="3">
+                                    <div>推荐主题</div>
+                                    <ul class="banner-right-list">
+                                        <li class="banner-right-item" v-for="a in bannerRight" v-bind:style="a.style">
+                                            <a v-bind:href="a.url">
+                                            <div class="banner-right-item-pic">
+                                            <img v-bind:src="a.img">
+                                            
+                                            <div class="banner-right-item-text">
+                                                <p>{{a.text}}</p>
+                                            </div>
+                                        </div>
+                                        </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="4">
+                                    <div>24小时热榜</div>
+                                    <ul class="banner-right-list">
+                                        <li class="banner-right-item" v-for="a in bannerRight" v-bind:style="a.style">
+                                            <a v-bind:href="a.url">
+                                            <div class="banner-right-item-pic">
+                                            <img v-bind:src="a.img">
+                                            
+                                            <div class="banner-right-item-text">
+                                                <p>{{a.text}}</p>
+                                            </div>
+                                        </div>
+                                        </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="5">
+                                    <div>精选主题</div>
+                                    <ul class="banner-right-list">
+                                        <li class="banner-right-item" v-for="a in bannerRight" v-bind:style="a.style">
+                                            <a v-bind:href="a.url">
+                                            <div class="banner-right-item-pic">
+                                            <img v-bind:src="a.img">
+                                            
+                                            <div class="banner-right-item-text">
+                                                <p>{{a.text}}</p>
+                                            </div>
+                                        </div>
+                                        </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+                                </div>
                             </div>
 
                         </div>
@@ -1352,69 +1506,19 @@
                         <div class="footer-content-first">
                             <div>36氪</div>
                             <div class="footer-content-first-li">
-                                <li>城市加盟</li>
-                                <li>寻求报道</li>
-                                <li>我要入驻</li>
-                                <li>投资者关系</li>
+                                <li v-for="a in li1">{{a.text}}</li>
                             </div>
                             <div class="footer-content-first-li2">
-                                <li>商务合作</li>
-                                <li>关于我们</li>
-                                <li>联系我们</li>
-                                <li>加入我们</li>
+                                <li v-for="a in li2">{{a.text}}</li>
                             </div>
                         </div>
                         <div class="footer-content-second">
                             <div>合作伙伴</div>
                             <ul class="footer-content-second-style">
-                                <li><a href="https://www.aliyun.com/" target="_blank"
-                                        rel="noopener noreferrer nofollow">
-                                        <img src="image/aly.png" alt>
-                                    </a></li>
-                                <li><a href="https://www.volcengine.cn/">
-                                        <img src="image/hsyq.png" alt>
-                                    </a></li>
-                                <li><a href="https://www.upyun.com/">
-                                        <img src="image/ypy.png" alt>
-                                    </a></li>
-                                <li>
-                                    <a href="https://www.baidu.com">
-                                        <img src="image/gaudi.png" alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.teambition.com/?utm_source=36kr&utm_campaign=logo-brand">
-                                        <img src="image/teambition.png" alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.getui.com/">
-                                        <img src="image/getui.png" alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.odaily.com/">
-                                        <img src="image/dailyPlanet.png" alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.easemob.com/">
-                                        <img src="image/huanxin.png" alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.jingdata.com/">
-                                        <img src="image/jingzhun.png" alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.krspace.cn/">
-                                        <img src="image/ke.png " alt>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.futunn.com/">
-                                        <img src="image/ftnn.png" alt>
+                                <li v-for="a in friend">
+                                    <a v-bind:href="a.url" target="_blank"
+                                    rel="noopener noreferrer nofollow">
+                                    <img v-bind:src="a.img" alt>
                                     </a>
                                 </li>
                             </ul>
@@ -1579,17 +1683,20 @@
                 {
                     "img": "image/banner_right2.jpg",
                     "url": "https://36kr.com/p/1112255743813635",
-                    "text": "36氪首发 | 从屠宰到零售只需4小时，鲜牛肉品牌「牛痴」获IDG资本数千万元天使轮融资"
+                    "text": "36氪首发 | 从屠宰到零售只需4小时，鲜牛肉品牌「牛痴」获IDG资本数千万元天使轮融资",
+                    "style":"margin-left: 10px;"
                 },
                 {
                     "img": "image/banner_right3.png",
                     "url": "https://36kr.com/p/1111758317742345",
-                    "text": "36氪首发 | 「花点时间」完成亿元C1轮融资，累计发出鲜花超5亿⽀"
+                    "text": "36氪首发 | 「花点时间」完成亿元C1轮融资，累计发出鲜花超5亿⽀",
+                    "style":"margin-top: 10px;"
                 },
                 {
                     "img": "image/banner_right4.png",
                     "url": "https://36kr.com/p/1111128398178305",
-                    "text": "36氪首发 | 国产新型疫苗加速冲刺，「依生生物」获逾1.3亿美元B轮融资"
+                    "text": "36氪首发 | 国产新型疫苗加速冲刺，「依生生物」获逾1.3亿美元B轮融资",
+                    "style":"margin-top: 10px;margin-left: 10px;"
                 },
 
             ],
@@ -2145,6 +2252,92 @@
             }
                 ]
             }
+            ],
+            latestNews:[{
+                "text":"测试",
+                "time":"5小时",
+                "textMore":"2qweqwdasdasdadwq"
+            },
+        ],
+            li1:[{
+                "url": "https://36kr.com/station-business",
+                "text":"城市加盟"
+            },
+            {
+                "url": "https://36kr.com/seek-report",
+                "text":"寻求报道"
+            },
+            {
+                "url": "https://www.baidu.com",
+                "text":"我要入驻"
+            },
+            {
+                "url": "https://ir.36kr.com/",
+                "text":"投资者关系"
+            },
+        ],
+            li2:[{
+                "url": "https://www.baidu.com",
+                "text":"商务合作"
+            },
+            {
+                "url": "https://36kr.com/pages/about",
+                "text":"关于我们"
+            },
+            {
+                "url": "https://www.baidu.com",
+                "text":"联系我们"
+            },
+            {
+                "url": "https://zhaopin.36kr.com/apply/36kr-med/4734/#/",
+                "text":"加入我们"
+            }],
+            friend:[
+            {
+                "url": "https://www.aliyun.com/",
+                "img":"image/aly.png"
+            },
+            {
+                "url": "https://www.volcengine.cn/",
+                "img":"image/hsyq.png"
+            },
+            {
+                "url": "https://www.upyun.com/",
+                "img":"image/ypy.png"
+            },
+            {
+                "url": "https://www.baidu.com",
+                "img":"image/gaudi.png"
+            },
+            {
+                "url": "https://www.teambition.com/?utm_source=36kr&utm_campaign=logo-brand",
+                "img":"image/teambition.png"
+            },
+            {
+                "url": "https://www.getui.com/",
+                "img":"image/getui.png"
+            },
+            {
+                "url": "https://www.odaily.com/",
+                "img":"image/dailyPlanet.png"
+            },
+            {
+                "url": "https://www.easemob.com/",
+                "img":"image/huanxin.png"
+            },
+            {
+                "url": "https://www.jingdata.com/",
+                "img":"image/jingzhun.png"
+            },
+            {
+                "url": "https://www.krspace.cn/",
+                "img":"image/ke.png"
+            },
+            {
+                "url": "https://www.futunn.com/",
+                "img":"image/ftnn.png"
+            }
+
             ],
             index: 0,
             total: 0
