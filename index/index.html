@@ -948,6 +948,91 @@
     }
 
 
+    .right-home-rightcontent{
+        width: 300px;
+        float: left;
+    }
+.latestnews{
+
+}
+.latestnews-title{
+    height: 28px;
+    line-height: 28px;
+}
+
+.latestnews-title-icon{
+    display: inline-block;
+    padding: 7px;
+    background: url(image/home.png) no-repeat;
+    background-size: 246px 1012px;
+    background-position: 0 -125px;
+}
+.latestnews-title-title{
+    font-size: 20px;
+    color: #262626;
+    padding-left: 4px;
+    font-weight: 500;
+}
+
+.latestnews-list{
+    position: relative;
+    padding-left: 22px;
+    margin-top: 20px;
+}
+.latestnews-item{
+    padding-bottom: 16px;
+}
+
+.latestnews-item-head{
+    position: relative;
+}
+.latestnews-item-icon{
+    display: inline-block;
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    border: 4px solid #b3ccf4;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    left: -22px;
+    z-index: 1;
+}
+.latestnews-item-title{
+font-size: 14px;
+    color: #262626;
+    line-height: 22px;
+    max-height: 44px;
+    overflow: hidden;
+    text-align: justify;
+    cursor: pointer;
+}
+.latestnews-item-time{
+    padding-top: 7px;
+    font-size: 12px;
+    color: #a7a7a7;
+}
+.latestnews-item-textMore{
+    position: relative;
+    font-size: 13px;
+    color: #787878;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: justify;
+    height: 0;
+    opacity: .3;
+    overflow:hidden;
+    transition: opacity .5s linear;
+}
+.latestnews-item-pic{
+    max-width: 100%;
+    max-height: 300px;
+}
+.latestnews-item-url{
+    color: #4285f4;
+}
+
+
     .footer {
         color: white;
         background: #2d3237;
@@ -1400,12 +1485,26 @@
                                 <div class="right-home-rightcontent clearfloat">
                                     <div class="latestnews">
                                     <div class="latestnews-title">
-                                        最新快讯
+                                        <span class="latestnews-title-icon"></span>
+                                        <span class="latestnews-title-title">最新快讯</span>
                                     </div>
                                     <ul class="latestnews-list">
                                         <li class="latestnews-item" v-for="a in latestNews">
-                                            <div>{{a.text}}</div>
-                                            <div>{{a.textMore}}</div>
+                                            <div class="latestnews-item-head">
+                                            <span class="latestnews-item-icon"></span>
+                                            <div class="latestnews-item-title" v-on:click="latest(a.active,a.value,a.id)">{{a.text}}</div>
+                                            <p>{{a.value}}</p>
+                                            <p>{{a.active}}</p>
+                                            <div class="latestnews-item-time">{{a.time}}</div>
+                                        </div>
+                                            <div class="latestnews-item-textMore" v-bind:style="a.value">
+                                                
+                                                <p>{{a.textMore}}</p>
+                                                <img v-bind:src="a.img" alt class="latestnews-item-pic">
+                                                <a v-bind:href="a.url" class="latestnews-item-url"></a>
+                                            </div>
+                                            
+                                            
                                             </li>
                                     </ul>
                                     <div class="latestnews-more">
@@ -2253,11 +2352,49 @@
                 ]
             }
             ],
-            latestNews:[{
-                "text":"测试",
+            latestNews:[
+            {
+                active:false,
+                value:0,
+                id:0,
+                "text":"市场监管总局对橙心优选、多多买菜等五家社区团购企业不正当价格行为作出行政处罚",
                 "time":"5小时",
-                "textMore":"2qweqwdasdasdadwq"
+                "textMore":"36氪获悉，据市场监管总局官方微信，经查明，橙心优选（北京）科技发展有限公司、上海禹璨信息技术有限公司、深圳美团优选科技有限公司、北京十荟科技有限公司、武汉七种美味科技有限公司等社区团购企业存在低价倾销、价格欺诈等不正当价格行为。对橙心优选（北京）科技发展有限公司等四家社区团购企业分别处以150万元人民币罚款的行政处罚，对武汉七种美味科技有限公司处以50万元人民币罚款的行政处罚。"
             },
+            {
+                active:false,
+                value:0,
+                id:1,
+                "text":"360周鸿祎两会三份提案，涉城市网络安全、智能汽车网络安全等",
+                "time":"6小时",
+                "textMore":"36氪获悉，全国政协委员、360集团创始人周鸿祎提交三份提案，分别是加快构建智慧城市安全基座“城市级网络安全基础设施”、加强智能汽车网络安全，以及对网络安全行业特殊人才给予认定和激励政策。针对智能汽车安全问题，他提出把网络安全系统像“安全带”一样列为智能汽车的标配；推进智能汽车网络安全强制测试；强化智能网联汽车产生的数据安全监管等三条建议。"
+            },
+            {
+                active:false,
+                value:0,
+                id:2,
+                "text":"字节跳动关联公司申请“字节付”商标",
+                "time":"7小时",
+                "textMore":"36氪获悉，天眼查App显示，近日，北京字节跳动科技有限公司申请注册“字节付”“BYTEPAY”商标，申请日为2021年2月22日，国际分类为广告销售、金融物管等，商标状态为“商标申请中”。",
+                "img":"image/main/main8.png",
+                "url":"https://www.baidu.com"
+            },
+            {
+                active:false,
+                value:0,
+                id:3,
+                "text":"野村：重申海底捞“买入”评级，目标价微降2.4%至89.1港元",
+                "time":"8小时",
+                "textMore":"野村发布研究报告，将海底捞目标价由91.3港元下调2.4%至89.1港元，重申“买入”评级。 报告提到，海底捞日前发盈警，预期2020年度净利润下降约90%，比该行预期差，所以将盈利预测削减66%，销售预测下调4.9%。该行认为，随着疫情情况的持续改善，预期人流量将会有所改善，以及去年的积极开业，这可能会推动2021以后的销售，预计2021财年的恢复加快。（智通财经）"
+            },
+            {
+                active:false,
+                value:0,
+                id:4,
+                "text":"定位高端清洁家电厂商，“顺造科技”获小米集团战略融资",
+                "time":"9小时",
+                "textMore":"36氪获悉，“顺造科技”近日正式宣布，获得小米集团战略融资。顺造科技成立于2019年7月，是一家高端清洁电器厂商，其主要产品覆盖家用空间、车载空间、办公空间等众多清洁类场景。创立一年多以来，顺造科技已经推出了包括手持无线吸尘器吸尘器、随手吸尘器、智能扫地机器人等高端清洁电器。"
+            }
         ],
             li1:[{
                 "url": "https://36kr.com/station-business",
@@ -2340,7 +2477,7 @@
 
             ],
             index: 0,
-            total: 0
+            total: 0,
         },
         methods: {
             left: function () {
@@ -2349,6 +2486,23 @@
             right: function () {
                 this.index++;
                 console.log(this.index)
+            },
+            latest(active,value,id){
+                if(this.active){
+                    this.id=this.id
+					this.latestNews.active = !this.active
+                    this.latestNews.value="overflow:hidden"
+                    Vue.set(this.latestNews,this.id,this.latestNews[id])
+                    alert(this.latestNews[id],this.id)
+				}
+				else{
+                    this.latestNews.active = !this.active
+                    this.id=this.id
+                    this.latestNews.value="overflow:visible"
+                    Vue.set(this.latestNews,this.id,this.latestNews[id])
+                    alert(this.latestNews[id],this.id)
+				}
+
             }
         },
         computed: {
