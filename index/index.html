@@ -767,6 +767,10 @@
         line-height: 18px;
         padding: 0 15px;
     }
+    .specific-seemore{
+        font-size: 13px;
+    color: #787878;
+    }
 
 
 
@@ -870,7 +874,10 @@
         line-height: 18px;
         padding: 0 15px;
     }
-
+    .video-seemore{
+        font-size: 13px;
+    color: #787878;
+    }
 
     .left {
         height: 40px;
@@ -955,19 +962,19 @@
 .latestnews{
 
 }
-.latestnews-title{
+.latestnews-header{
     height: 28px;
     line-height: 28px;
 }
 
-.latestnews-title-icon{
+.latestnews-header-icon{
     display: inline-block;
     padding: 7px;
     background: url(image/home.png) no-repeat;
     background-size: 246px 1012px;
     background-position: 0 -125px;
 }
-.latestnews-title-title{
+.latestnews-header-title{
     font-size: 20px;
     color: #262626;
     padding-left: 4px;
@@ -1031,6 +1038,101 @@ font-size: 14px;
 .latestnews-item-url{
     color: #4285f4;
 }
+.latestnews-seemore{
+    border: 1px solid #4285f4;
+    border-radius: 1px;
+    font-size: 14px;
+    color: #4285f4;
+    text-align: center;
+    width: 278px;
+    height: 36px;
+    line-height: 36px;
+    display: block;
+}
+
+
+.livestreaming{
+
+}
+.livestreaming-header{
+    height: 28px;
+    line-height: 28px;
+}
+.livestreaming-header-icon{
+    display: inline-block;
+    padding: 7px;
+    background: url(image/home.png) no-repeat;
+    background-size: 246px 1012px;
+    background-position: 0 -125px;
+}
+.livestreaming-header-title{
+    font-size: 20px;
+    color: #262626;
+    padding-left: 4px;
+    font-weight: 500;
+
+}
+
+.livestreaming-list{
+    position: relative;
+    padding-left: 22px;
+    margin-top: 20px;
+}
+.livestreaming-item{
+
+}
+.livestreaming-item-header{
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 168px;
+    overflow: hidden;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.livestreaming-item-header-state{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    color: #fff;
+    font-size: 12px;
+    z-index: 100;
+}
+.livestreaming-item-header-stating{
+    width: 38px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #027aff;
+    font-weight: bolder;
+    border-bottom-right-radius: 2px;
+    padding-left: 5px;
+    letter-spacing: 4px;
+}
+.livestreaming-item-header-pic{
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.livestreaming-item-content{
+    padding-bottom: 10px;
+    padding-left: 5px;
+  
+
+}
+.livestreaming-item-content-title{
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.livestreaming-item-content-state{
+    color: #4285f4;
+    font-size: 12px;
+}
+
+
 
 
     .footer {
@@ -1372,7 +1474,7 @@ font-size: 14px;
 
                                                 <div class="specific-title">
                                                     <span class="specific-recommend">专题推荐</span>
-                                                    <a href="https://www.baidu.com">查看更多</a>
+                                                    <a href="https://www.baidu.com" class="specific-seemore">查看更多</a>
                                                 </div>
                                                 <ul class="specific-list">
                                                     <li class="specific-item" v-for="a in specific">
@@ -1410,7 +1512,7 @@ font-size: 14px;
                                             <div v-else-if="key=='13'" class="right-home-content-item-video">
                                                 <div class="video-title">
                                                     <span class="video-recommend">视频推荐</span>
-                                                    <a href="https://www.baidu.com">查看更多</a>
+                                                    <a href="https://www.baidu.com" class="video-seemore">查看更多</a>
                                                 </div>
                                                 <ul class="video-list">
                                                     <li class="video-item"  v-for="a in video">
@@ -1484,9 +1586,9 @@ font-size: 14px;
                                 </div>
                                 <div class="right-home-rightcontent clearfloat">
                                     <div class="latestnews">
-                                    <div class="latestnews-title">
-                                        <span class="latestnews-title-icon"></span>
-                                        <span class="latestnews-title-title">最新快讯</span>
+                                    <div class="latestnews-header">
+                                        <span class="latestnews-header-icon"></span>
+                                        <span class="latestnews-header-title">最新快讯</span>
                                     </div>
                                     <ul class="latestnews-list">
                                         <li class="latestnews-item" v-for="a in latestNews">
@@ -1507,27 +1609,38 @@ font-size: 14px;
                                             
                                             </li>
                                     </ul>
-                                    <div class="latestnews-more">
-                                        <a href="https://36kr.com/newsflashes">查看更多</a>
-                                    </div>
+                                    
+                                        <a href="https://36kr.com/newsflashes" class="latestnews-seemore">查看更多</a>
+                                    
                                 </div>
 
-                                <div class="2">
-                                    <div>推荐直播</div>
-                                    <ul class="banner-right-list">
-                                        <li class="banner-right-item" v-for="a in bannerRight" v-bind:style="a.style">
-                                            <a v-bind:href="a.url">
-                                            <div class="banner-right-item-pic">
-                                            <img v-bind:src="a.img">
+                                <div class="livestreaming">
+                                    <div class="livestreaming-header">
+                                        <span class="livestreaming-header-icon"></span>
+                                        <span class="livestreaming-header-title">推荐直播</span>
+                                    </div>
+                                    <div class="livestreaming-list">
+                                        <div class="livestreaming-item" v-for="a in livestreaming">
+                                            <a v-bind:href="a.url" class="livestreaming-item-header">
+                                                <div class="livestreaming-item-header-state">
+                                                    <div class="livestreaming-item-header-stating">
+                                                        {{a.state}}
+                                                    </div>
+                                                    </div>
+                                                <img v-bind:src="a.img" alt class="livestreaming-item-header-pic">
                                             
-                                            <div class="banner-right-item-text">
-                                                <p>{{a.text}}</p>
-                                            </div>
-                                        </div>
                                         </a>
+                                            <div class="livestreaming-item-content">
+                                                <a v-bind:href="a.url" class="livestreaming-item-content-title">{{a.title}}</a>
+                                                <div class="livestreaming-item-content-state clearfloat">
+                                                正在直播
+                                            </div>
 
-                                        </li>
-                                    </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
                                 </div>
 
                                 <div class="3">
@@ -2395,6 +2508,25 @@ font-size: 14px;
                 "time":"9小时",
                 "textMore":"36氪获悉，“顺造科技”近日正式宣布，获得小米集团战略融资。顺造科技成立于2019年7月，是一家高端清洁电器厂商，其主要产品覆盖家用空间、车载空间、办公空间等众多清洁类场景。创立一年多以来，顺造科技已经推出了包括手持无线吸尘器吸尘器、随手吸尘器、智能扫地机器人等高端清洁电器。"
             }
+        ],
+        livestreaming:[{
+            "url":"https://36kr.com/live/1122115803909127",
+            "img":"image/livestreaming1.jpg",
+            "title":"数字经济大盘点2020-2021",
+            "state":"预告"
+        },
+        {
+            "url":"https://36kr.com/live/1122115803909127",
+            "img":"image/livestreaming1.jpg",
+            "title":"数字经济大盘点2020-2021",
+            "state":"预告"
+        },
+        {
+            "url":"https://36kr.com/live/1122115803909127",
+            "img":"image/livestreaming1.jpg",
+            "title":"数字经济大盘点2020-2021",
+            "state":"预告"
+        }
         ],
             li1:[{
                 "url": "https://36kr.com/station-business",
