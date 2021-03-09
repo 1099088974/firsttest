@@ -15,7 +15,43 @@
         min-width: 1280px;
         margin: 0 auto;
     }
+    .bg{
+        position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    height: 1150px;
+    width: 100%;
 
+    background-size: contain;
+    }
+    .bg-list{
+        position: relative;
+    height: 900px;
+    width: 1170px;
+    margin: auto;
+    }
+    .bg-item1{
+        left: -380px;
+    width: 500px;
+    height: 300px;
+    background: url(image/bg1.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 44px;
+    z-index: -9;
+    }
+    .bg-item2{
+        right: -375px;
+    width: 375px;
+    height: 310px;
+    background: url(image/bg2.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 44px;
+    z-index: -9;
+    }
+    
     .head {
         width: 1170px;
         margin: 44px auto 0;
@@ -199,10 +235,10 @@
 
     .main-left {
         width: 100px;
-        min-height: 600px;
-        float: left;
-        position: relative;
-
+    min-height: 600px;
+    float: left;
+    position: relative;
+    z-index: 1000;
 
     }
 
@@ -265,14 +301,13 @@
 
     .left-new-icon {
         display: inline-block;
-        background: url(data:image/home.png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUCAMAAADSpG8HAAAAjVBMVEUAAAD/Y2P/Y2P/Y2P/YmL/Y2P/ZGT/ZGT/Zmb/bW3/YmL/////aWn/u7v/mJj/jo7/+/v/goL/nJz/29v/ysr/c3P/ior/enr/b2//9/f/8/P/4eH/xcX/tbX/p6f/n5//dnb/Zmb/9fX/6ur/6en/5eX/1NT/0ND/v7//s7P/q6v/k5P/kJD/fn7/wsLdxGk5AAAACnRSTlMA2Pm1j4tAMzIHqetxhwAAAMxJREFUKM+t0McOwyAQRVHSkzeAcYxL3J3e///zYqIUvIlZ5C6QGB2BNGyE3kYMDrmjRlwA+KKJhelSixsQiQRYnj6I06puB8Q90nmeS64KQJMEttpGwQuFMO3ba5oekVBlofOqtFGp+I3OW0gKLSQrFT8RKaUixBSVWU3hMYONcMgqg66+73NgczoU2Cx3RRcl6e77HUSw9nDfU9RFkPR+KQY8UrydrIEugjbIFACNao+EtNPG/47Gg58Nn6in+cABscUEQ9bfbMpcegAleh0ZHd6gHwAAAABJRU5ErkJggg==) no-repeat 50%;
+        background: url(image/new.png) no-repeat 50%;
         background-size: contain;
         cursor: pointer;
         width: 18px;
         height: 10px;
         position: absolute;
-        right: 41px;
-        top: 444px;
+
     }
 
     .main-left-content {
@@ -448,6 +483,7 @@
     .main-right {
         width: 1030px;
         float: right;
+        margin-top:99px;
     }
 
     .main-right-img {
@@ -687,6 +723,25 @@
     .right-home-content-item-specific {
         padding-top: 20px;
         padding-bottom: 10px;
+    }
+
+    .right-home-content-white-space{
+        height: 30px;
+    width: 100%;
+    visibility: hidden;
+    }
+    .right-home-content-seemore{
+        width: 140px;
+    height: 36px;
+    line-height: 34px;
+    border-radius: 1px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    color: #4285f4;
+    border: 1px solid #4285f4;
+    cursor: pointer;
+    display: block;
     }
 
     .specific-title {
@@ -1544,8 +1599,8 @@ padding-right: 10px;
         background: #2d3237;
         width: 100%;
         position: relative;
-        bottom: 0px;
         left: 0px;
+        z-index: 1000;
     }
 
     .footer .footer-content {
@@ -1714,6 +1769,13 @@ padding-right: 10px;
 <body>
     <div id="app">
         <div class="all">
+            <div class="bg">
+                <div class="bg-list">
+                    <div class="bg-item1"></div>
+                    <div class="bg-item2"></div>
+
+                </div>
+            </div>
             <div class="head clearfloat">
                 <div class="header">
                     <div class="header-all">
@@ -1988,6 +2050,9 @@ padding-right: 10px;
 
                                         </div>
                                     </div>
+                                    <div class="right-home-content-white-space"></div>
+                                    <a class="right-home-content-seemore" href="https://36kr.com/information/web_news/latest">查看更多资讯</a>
+                                    <div class="right-home-content-white-space"></div>
                                 </div>
                                 <div class="right-home-rightcontent clearfloat">
                                     <div class="latestnews">
@@ -2138,18 +2203,18 @@ padding-right: 10px;
 
                                         </div>
                                         <div class="selectedthemes-list">
-                                            <div class="selectedthemes-item" v-for="a in selectedThemes">
+                                            <div class="selectedthemes-item" v-for="(a,key) in selectedThemes"  >
                                                 <div class="selectedthemes-item-header">
                                                     <a v-bind:href="a.url" class="selectedthemes-item-header-img"><img v-bind:src="a.img" alt></a>
                                                     <div class="selectedthemes-item-header-right">
                                                     <a v-bind:href="a.url" class="selectedthemes-item-header-title">{{a.title}}</a>
-                                                    <span class="selectedthemes-item-header-focus">关注</span>
+                                                    <span class="selectedthemes-item-header-focus"  v-on:click="changeData(key)">{{a.count}}关注</span>
                                                 </div>
                                                 </div>
                                                 
                                                     <a v-bind:href="a.url" class="selectedthemes-item-content">{{a.content}}</a>
 
-                                                    <span class="selectedthemes-item-time">{{a.time}}</span>
+                                                    <div class="selectedthemes-item-time">{{a.time}}</div>
 
                                                 
 
@@ -3073,36 +3138,42 @@ padding-right: 10px;
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08"
+                    "time":"2021-03-08",
+                    count:0
+
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08"
+                    "time":"2021-03-08",
+                    count:0
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08"
+                    "time":"2021-03-08",
+                    count:0
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08"
+                    "time":"2021-03-08",
+                    count:0
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08"
-                }
+                    "time":"2021-03-08",
+                    count:0
+                },
             ],
             li1: [{
                     "url": "https://36kr.com/station-business",
@@ -3210,6 +3281,11 @@ padding-right: 10px;
                     alert(this.latestNews[id], this.id)
                 }
 
+            },
+            changeData (key) {
+                this.selectedThemes[key].count+=1
+                //this.splice(key,1,{ selectedThemes:[{ count:"this.selectedThemes[key].count"}]})
+                //Vue.set(this.selectedThemes,key,'this.selectedThemes[key].count')
             }
         },
         computed: {
