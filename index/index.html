@@ -15,43 +15,47 @@
         min-width: 1280px;
         margin: 0 auto;
     }
-    .bg{
-        position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -10;
-    height: 1150px;
-    width: 100%;
 
-    background-size: contain;
+    .bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -10;
+        height: 1150px;
+        width: 100%;
+
+        background-size: contain;
     }
-    .bg-list{
+
+    .bg-list {
         position: relative;
-    height: 900px;
-    width: 1170px;
-    margin: auto;
+        height: 900px;
+        width: 1170px;
+        margin: auto;
     }
-    .bg-item1{
+
+    .bg-item1 {
         left: -380px;
-    width: 500px;
-    height: 300px;
-    background: url(image/bg1.png) no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top: 44px;
-    z-index: -9;
+        width: 500px;
+        height: 300px;
+        background: url(image/bg1.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 44px;
+        z-index: -9;
     }
-    .bg-item2{
+
+    .bg-item2 {
         right: -375px;
-    width: 375px;
-    height: 310px;
-    background: url(image/bg2.png) no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top: 44px;
-    z-index: -9;
+        width: 375px;
+        height: 310px;
+        background: url(image/bg2.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 44px;
+        z-index: -9;
     }
-    
+
     .head {
         width: 1170px;
         margin: 44px auto 0;
@@ -235,10 +239,10 @@
 
     .main-left {
         width: 100px;
-    min-height: 600px;
-    float: left;
-    position: relative;
-    z-index: 1000;
+        min-height: 600px;
+        float: left;
+        position: relative;
+        z-index: 1000;
 
     }
 
@@ -483,7 +487,7 @@
     .main-right {
         width: 1030px;
         float: right;
-        margin-top:99px;
+        margin-top: 99px;
     }
 
     .main-right-img {
@@ -534,10 +538,7 @@
         position: relative;
     }
 
-    .right-home-banner-left:hover .left,
-    .right {
-        display: block;
-    }
+
 
     .right-home-banner-right {
         float: right;
@@ -585,6 +586,70 @@
         width: 100%;
         height: 100%;
     }
+
+
+    .pre{
+        height: 40px;
+    width: 28px;
+    z-index: 10;
+    position: absolute;
+    top: 130px;
+    cursor: pointer;
+    display: none;
+    background: url(image/home.png) no-repeat 50%;
+    background-size: 246px 1012px;
+    background-position: 0 -904px;
+    left: 0;
+    }
+    .next{
+        height: 40px;
+    width: 28px;
+    z-index: 10;
+    position: absolute;
+    top: 130px;
+    cursor: pointer;
+    display: none;
+    background: url(image/home.png) no-repeat 50%;
+    background-size: 246px 1012px;
+    background-position: 0 -944px;
+    right: 0;
+    }
+
+    .right-home-banner-left:hover .next, .right-home-banner-left:hover .pre {
+    display: block;
+}
+    .bannerLeft-slide-list{
+        position: absolute;
+    bottom: 0;
+    left: 20px;
+    z-index: 100;
+    }
+.bannerLeft-slide-item{
+    width: 30px;
+    height: 20px;
+    margin-right: 4px;
+    float: left;
+    border-radius: .5px;
+    cursor: default;
+    position: relative;
+}
+.bannerLeft-slide-item-line{
+    background: hsla(0,0%,100%,.5);
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+.bannerLeft-slide-item-bg{
+    height: 2px;
+    background: #4285f4;
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
 
     .right-home-content-all {
         float: left;
@@ -725,23 +790,24 @@
         padding-bottom: 10px;
     }
 
-    .right-home-content-white-space{
+    .right-home-content-white-space {
         height: 30px;
-    width: 100%;
-    visibility: hidden;
+        width: 100%;
+        visibility: hidden;
     }
-    .right-home-content-seemore{
+
+    .right-home-content-seemore {
         width: 140px;
-    height: 36px;
-    line-height: 34px;
-    border-radius: 1px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 16px;
-    color: #4285f4;
-    border: 1px solid #4285f4;
-    cursor: pointer;
-    display: block;
+        height: 36px;
+        line-height: 34px;
+        border-radius: 1px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+        color: #4285f4;
+        border: 1px solid #4285f4;
+        cursor: pointer;
+        display: block;
     }
 
     .specific-title {
@@ -1476,121 +1542,133 @@
         background-repeat: no-repeat;
         background-size: 246px 1012px;
     }
-    .hotchart-item-other-footer{
+
+    .hotchart-item-other-footer {
         height: 100%;
-    margin-left: 10px;
-    position: relative;
-    float: left;
-    width: 185px;
+        margin-left: 10px;
+        position: relative;
+        float: left;
+        width: 185px;
     }
 
     .hotchart-item-other-title {
         font-size: 13px;
-    color: #262626;
-    letter-spacing: 0;
-    text-align: justify;
-    line-height: 20px;
-    max-height: 40px;
-    overflow: hidden;
+        color: #262626;
+        letter-spacing: 0;
+        text-align: justify;
+        line-height: 20px;
+        max-height: 40px;
+        overflow: hidden;
     }
-    .hotchart-item-other-footer span{
-        font-size: 12px;
-    color: #a7a7a7;
-    letter-spacing: 0;
-    text-align: justify;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    line-height: 18px;
-    }
-    
 
-.selectedthemes{
-    width: 300px;
-    float: right;
-}
-.selectedthemes-header{
-    height: 28px;
-    line-height: 28px;
-}
-.selectedthemes-header-icon{
-    display: inline-block;
+    .hotchart-item-other-footer span {
+        font-size: 12px;
+        color: #a7a7a7;
+        letter-spacing: 0;
+        text-align: justify;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        line-height: 18px;
+    }
+
+
+    .selectedthemes {
+        width: 300px;
+        float: right;
+    }
+
+    .selectedthemes-header {
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .selectedthemes-header-icon {
+        display: inline-block;
         padding: 7px;
         background: url(image/home.png) no-repeat;
         background-size: 246px 1012px;
         background-position: 0 -125px;
-}
-.selectedthemes-header-title{
-    color: black;
-    font-size: 20px;
-    padding-left: 4px;
-}
-.selectedthemes-header-seemore span{
-color: #787878;
-float: right;
-font-size: 13px;
-padding-right: 10px;
-}
-.selectedthemes-list{
+    }
 
-}
-.selectedthemes-item{
-    width: 300px;
-    padding-top: 14px;
-    padding-bottom: 11px;
-    border-bottom: 1px solid #ddd;
-}
-.selectedthemes-item-header{
-    height: 60px;
-    overflow: hidden;
-}
-.selectedthemes-item-header-img img{
-    height: 60px;
-    width: 60px;
-    float: left;
-    border-radius: 2px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.selectedthemes-item-header-right{
-    float: left;
-    margin-left: 10px;
-    position: relative;
-    height: 100%;
-    width: 230px;
-}
+    .selectedthemes-header-title {
+        color: black;
+        font-size: 20px;
+        padding-left: 4px;
+    }
 
-.selectedthemes-item-header-title{
-    font-size: 14px;
-    color: #262626;
-    display: block;
-    padding-top: 5px;
-}
-.selectedthemes-item-header-focus{
-    font-size: 13px;
-    color: #999ca0;
-    position: absolute;
-    line-height: 20px;
-    bottom: 4px;
-    left: 0;
-}
-.selectedthemes-item-content{
-    font-size: 13px;
-    color: #787878;
-    letter-spacing: 0;
-    text-align: justify;
-    line-height: 20px;
-    max-height: 40px;
-    overflow: hidden;
-    margin-top: 10px;
-}
-.selectedthemes-item-time{
-    padding-top: 6px;
-    font-size: 12px;
-    color: #a7a7a7;
-}
+    .selectedthemes-header-seemore span {
+        color: #787878;
+        float: right;
+        font-size: 13px;
+        padding-right: 10px;
+    }
+
+    .selectedthemes-list {}
+
+    .selectedthemes-item {
+        width: 300px;
+        padding-top: 14px;
+        padding-bottom: 11px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .selectedthemes-item-header {
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .selectedthemes-item-header-img img {
+        height: 60px;
+        width: 60px;
+        float: left;
+        border-radius: 2px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .selectedthemes-item-header-right {
+        float: left;
+        margin-left: 10px;
+        position: relative;
+        height: 100%;
+        width: 230px;
+    }
+
+    .selectedthemes-item-header-title {
+        font-size: 14px;
+        color: #262626;
+        display: block;
+        padding-top: 5px;
+    }
+
+    .selectedthemes-item-header-focus {
+        font-size: 13px;
+        color: #999ca0;
+        position: absolute;
+        line-height: 20px;
+        bottom: 4px;
+        left: 0;
+    }
+
+    .selectedthemes-item-content {
+        font-size: 13px;
+        color: #787878;
+        letter-spacing: 0;
+        text-align: justify;
+        line-height: 20px;
+        max-height: 40px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .selectedthemes-item-time {
+        padding-top: 6px;
+        font-size: 12px;
+        color: #a7a7a7;
+    }
 
 
 
@@ -1898,8 +1976,8 @@ padding-right: 10px;
                                 <div class="right-home-banner-left">
                                     <div class="banner-left-all">
                                         <div class="banner-left-list">
-                                            <div class="bannerLeft" v-for="a in bannerLeft">
-                                                <div class="bannerLeft-list">
+                                            <div class="bannerLeft" v-for="a in bannerLeft" >
+                                                <div class="bannerLeft-list" >
                                                     <div class="bannerLeft-item">
                                                         <a v-bind:href="a.url"><img v-bind:src="a.img"
                                                                 v-bind:alt="a.text"></a>
@@ -1907,8 +1985,15 @@ padding-right: 10px;
                                                 </div>
 
                                             </div>
-                                            <div class="left"></div>
-                                            <div class="right"></div>
+  
+                                        </div>
+                                        <div class="pre" v-on:click="plusSlides(-1)"></div>
+                                        <div class="next" v-on:click="plusSlides(-1)"></div>
+                                        <div class="bannerLeft-slide-list">
+                                            <div class="bannerLeft-slide-item" v-on:click="currentSlide(a)" v-for="a in 6">
+                                                <span class="bannerLeft-slide-item-line"> </span>
+                                                <span class="bannerLeft-slide-item-bg"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2051,7 +2136,8 @@ padding-right: 10px;
                                         </div>
                                     </div>
                                     <div class="right-home-content-white-space"></div>
-                                    <a class="right-home-content-seemore" href="https://36kr.com/information/web_news/latest">查看更多资讯</a>
+                                    <a class="right-home-content-seemore"
+                                        href="https://36kr.com/information/web_news/latest">查看更多资讯</a>
                                     <div class="right-home-content-white-space"></div>
                                 </div>
                                 <div class="right-home-rightcontent clearfloat">
@@ -2184,8 +2270,8 @@ padding-right: 10px;
                                                     </a>
                                                     <span class="hotchart-item-otherlogo" v-bind:style="a.style"></span>
                                                     <div class="hotchart-item-other-footer">
-                                                    <a v-bind:href="a.url"
-                                                        class="hotchart-item-other-title">{{a.title}}</a>
+                                                        <a v-bind:href="a.url"
+                                                            class="hotchart-item-other-title">{{a.title}}</a>
                                                         <span>{{a.time}}</span>
                                                     </div>
                                                 </div>
@@ -2199,24 +2285,29 @@ padding-right: 10px;
                                         <div class="selectedthemes-header">
                                             <span class="selectedthemes-header-icon"></span>
                                             <span class="selectedthemes-header-title">精选主题</span>
-                                            <a href="https://36kr.com/motif-catalog/selected" class="selectedthemes-header-seemore"><span>更多主题</span></a>
+                                            <a href="https://36kr.com/motif-catalog/selected"
+                                                class="selectedthemes-header-seemore"><span>更多主题</span></a>
 
                                         </div>
                                         <div class="selectedthemes-list">
-                                            <div class="selectedthemes-item" v-for="(a,key) in selectedThemes"  >
+                                            <div class="selectedthemes-item" v-for="(a,key) in selectedThemes">
                                                 <div class="selectedthemes-item-header">
-                                                    <a v-bind:href="a.url" class="selectedthemes-item-header-img"><img v-bind:src="a.img" alt></a>
+                                                    <a v-bind:href="a.url" class="selectedthemes-item-header-img"><img
+                                                            v-bind:src="a.img" alt></a>
                                                     <div class="selectedthemes-item-header-right">
-                                                    <a v-bind:href="a.url" class="selectedthemes-item-header-title">{{a.title}}</a>
-                                                    <span class="selectedthemes-item-header-focus"  v-on:click="changeData(key)">{{a.count}}关注</span>
+                                                        <a v-bind:href="a.url"
+                                                            class="selectedthemes-item-header-title">{{a.title}}</a>
+                                                        <span class="selectedthemes-item-header-focus"
+                                                            v-on:click="changeData(key)">{{a.count}}关注</span>
+                                                    </div>
                                                 </div>
-                                                </div>
-                                                
-                                                    <a v-bind:href="a.url" class="selectedthemes-item-content">{{a.content}}</a>
 
-                                                    <div class="selectedthemes-item-time">{{a.time}}</div>
+                                                <a v-bind:href="a.url"
+                                                    class="selectedthemes-item-content">{{a.content}}</a>
 
-                                                
+                                                <div class="selectedthemes-item-time">{{a.time}}</div>
+
+
 
                                             </div>
                                         </div>
@@ -3074,105 +3165,98 @@ padding-right: 10px;
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -228px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
+                    "time": "2021-03-08"
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -248px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
-                }
-                ,
+                    "time": "2021-03-08"
+                },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -268px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
-                }
-                ,
+                    "time": "2021-03-08"
+                },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -288px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
-                }
-                ,
+                    "time": "2021-03-08"
+                },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -308px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
-                }
-                ,
+                    "time": "2021-03-08"
+                },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -328px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
-                }
-                ,
+                    "time": "2021-03-08"
+                },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -348px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
-                }
-                ,
+                    "time": "2021-03-08"
+                },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
                     "style": "background-position: 0 -368px;background-color: #4285f4;opacity: 1;",
-                    "time":"2021-03-08"
+                    "time": "2021-03-08"
                 }
             ],
-            selectedThemes:[
-            {
+            selectedThemes: [{
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
-                    "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08",
-                    count:0
+                    "content": "数字经济大盘点2020-2021",
+                    "time": "2021-03-08",
+                    count: 0
 
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
-                    "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08",
-                    count:0
+                    "content": "数字经济大盘点2020-2021",
+                    "time": "2021-03-08",
+                    count: 0
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
-                    "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08",
-                    count:0
+                    "content": "数字经济大盘点2020-2021",
+                    "time": "2021-03-08",
+                    count: 0
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
-                    "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08",
-                    count:0
+                    "content": "数字经济大盘点2020-2021",
+                    "time": "2021-03-08",
+                    count: 0
                 },
                 {
                     "url": "https://36kr.com/live/1122115803909127",
                     "img": "image/livestreaming1.jpg",
                     "title": "数字经济大盘点2020-2021",
-                    "content":"数字经济大盘点2020-2021",
-                    "time":"2021-03-08",
-                    count:0
+                    "content": "数字经济大盘点2020-2021",
+                    "time": "2021-03-08",
+                    count: 0
                 },
             ],
             li1: [{
@@ -3257,14 +3341,35 @@ padding-right: 10px;
             ],
             index: 0,
             total: 0,
+            slideIndex: 1,
+            i:0,
+            showSlides(slideIndex)
         },
         methods: {
-            left: function () {
-                this.index--;
+            
+            plusSlides: function (n) {
+                showSlides(slideIndex += n);
             },
-            right: function () {
-                this.index++;
-                console.log(this.index)
+            currentSlide: function (n) {
+                showSlides(slideIndex = n)
+            },
+            showSlides: function (n) {
+                     slides = document.getElementsByClassName("bannerLeft-list")
+                 dots = document.getElementsByClassName("bannerLeft-slide-item")
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "")
+                }
+                slides[slideIndex - 1].style.display = "block"
+                dots[slideIndex - 1].className += " active"
             },
             latest(active, value, id) {
                 if (this.active) {
@@ -3282,8 +3387,8 @@ padding-right: 10px;
                 }
 
             },
-            changeData (key) {
-                this.selectedThemes[key].count+=1
+            changeData(key) {
+                this.selectedThemes[key].count += 1
                 //this.splice(key,1,{ selectedThemes:[{ count:"this.selectedThemes[key].count"}]})
                 //Vue.set(this.selectedThemes,key,'this.selectedThemes[key].count')
             }
