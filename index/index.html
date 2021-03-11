@@ -551,8 +551,37 @@
         overflow: hidden;
         position: relative;
     }
+    .banner-left-all-img {
+        width: 100%;
+        height: 100%;
+    }
+    .banner-left-all-title{
+        height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(
+-180deg
+,transparent 13%,rgba(0,0,0,.65) 97%);
+    text-align: left;
+    padding-top: 52px;
+    padding-left: 20px;
+    display: block;
+}
+    
+    .banner-left-all-text{
+        font-size: 20px;
+    color: #fff;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 28px;
+    height: 28px;
+    width: 680px;
+    font-weight: 500;
+}
 
-    .banner-left-list {
+
+   /* .banner-left-list {
         height: 100%;
         margin-left: -100%;
         position: absolute;
@@ -581,11 +610,12 @@
         height: 100%;
         position: relative;
     }
-
-    .bannerLeft-item img {
+        .bannerLeft-item img {
         width: 100%;
         height: 100%;
     }
+*/
+
 
 
     .pre{
@@ -1974,27 +2004,19 @@
                             </div>
                             <div class="right-home-banner clearfloat">
                                 <div class="right-home-banner-left">
-                                    <div class="banner-left-all">
-                                        <div class="banner-left-list">
-                                            <div class="bannerLeft" v-for="a in bannerLeft" >
-                                                <div class="bannerLeft-list" >
-                                                    <div class="bannerLeft-item">
-                                                        <a v-bind:href="a.url"><img v-bind:src="a.img"
-                                                                v-bind:alt="a.text"></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-  
-                                        </div>
-                                        <div class="pre" v-on:click="plusSlides(-1)"></div>
-                                        <div class="next" v-on:click="plusSlides(-1)"></div>
+                                    <div class="banner-left-all" @mouseover="clearInv" @mouseout="runInv">
+                                                        <a v-bind:href="bannerLeft[nowIndex].url"><img v-bind:src="bannerLeft[nowIndex].img" class="banner-left-all-img"></a>
+                                                        <a v-bind:href="bannerLeft[nowIndex].url" class="banner-left-all-title"><p class="banner-left-all-text">{{bannerLeft[nowIndex].text}}</p></a>
+                                    
+                                        <div class="pre" v-on:click="goto(prevIndex)"></div>
+                                        <div class="next" v-on:click="goto(nextIndex)"></div>
                                         <div class="bannerLeft-slide-list">
-                                            <div class="bannerLeft-slide-item" v-on:click="currentSlide(a)" v-for="a in 6">
+                                            <div class="bannerLeft-slide-item"v-for="(a,index) in bannerLeft"  v-on:click="goto(index)" >
                                                 <span class="bannerLeft-slide-item-line"> </span>
                                                 <span class="bannerLeft-slide-item-bg"></span>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="right-home-banner-right">
@@ -3341,26 +3363,38 @@
             ],
             index: 0,
             total: 0,
-            slideIndex: 1,
+            //slideIndex:1,
             i:0,
-            showSlides(slideIndex)
+            isShow:true,
+            nowIndex:0,
+            inv:2000
         },
         methods: {
-            
-            plusSlides: function (n) {
-                showSlides(slideIndex += n);
+            goto(index){
+                this.isShow=false
+                setTimeout(()=>{
+                    this.isShow=true,
+                    this.nowIndex=index
+                },10)
             },
-            currentSlide: function (n) {
-                showSlides(slideIndex = n)
+            runInv(){
+                this.timer=setInterval(()=>{
+                    this.goto(this.nextIndex)
+                },this.inv)
             },
-            showSlides: function (n) {
-                     slides = document.getElementsByClassName("bannerLeft-list")
-                 dots = document.getElementsByClassName("bannerLeft-slide-item")
+            clearInv(){
+                clearInterval(this.timer)
+            },
+
+           /* showSlides: function (n) {
+                
+                    var slides = document.getElementsByClassName("bannerLeft-list")
+                var dots = document.getElementsByClassName("bannerLeft-slide-item")
                 if (n > slides.length) {
-                    slideIndex = 1
+                    this.slideIndex = 1
                 }
                 if (n < 1) {
-                    slideIndex = slides.length
+                    this.slideIndex = slides.length
                 }
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none"
@@ -3369,8 +3403,10 @@
                     dots[i].className = dots[i].className.replace(" active", "")
                 }
                 slides[slideIndex - 1].style.display = "block"
-                dots[slideIndex - 1].className += " active"
-            },
+                dots[slideIndex - 1].className += " active"}, 
+             */
+
+
             latest(active, value, id) {
                 if (this.active) {
                     this.id = this.id
@@ -3394,6 +3430,26 @@
             }
         },
         computed: {
+           /* plusSlides(){
+                showSlides(slideIndex += n);
+            },
+            currentSlide(){
+                showSlides(slideIndex = n)
+            },*/
+            prevIndex () {             // 使用计算属性，
+				if (this.nowIndex === 0) {
+					return this.bannerLeft.length - 1
+				} else {
+					return this.nowIndex - 1
+				}
+			},
+			nextIndex () {
+				if (this.nowIndex === this.bannerLeft.length - 1) {
+					return 0
+				} else {
+					return this.nowIndex + 1
+				}
+			},
 
             site: {
                 // getter
@@ -3405,10 +3461,18 @@
                     var value = this.newValue
                     this.total = value + 1
                 }
-            }
-        }
+            },
+
+        },
+       /* mounted: function () {
+            this.showSlides(this.slideIndex)
+        }*/
+        mounted() {
+        this.runInv();
+    }
 
     })
+
 </script>
 
 </html>
