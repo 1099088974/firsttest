@@ -1212,6 +1212,7 @@
     }
 
     .latestnews-item-textMore {
+        height: auto;
         position: relative;
         font-size: 13px;
         color: #787878;
@@ -2173,17 +2174,16 @@
 
                                         <div class="latestnews-list">
 
-                                            <div class="latestnews-item" v-for="a in latestNews">
+                                            <div class="latestnews-item" v-for="(a,index) in latestNews"  >
                                                 <div class="latestnews-line">
 
                                                 </div>
-                                                <div class="latestnews-item-head">
+                                                <div class="latestnews-item-head" v-on:click="divShow(index)">
                                                     <span class="latestnews-item-icon"></span>
-                                                    <div class="latestnews-item-title"
-                                                        v-on:click="latest(a.active,a.value,a.id)">{{a.text}}</div>
+                                                    <div class="latestnews-item-title">{{a.text}}</div>
                                                     <div class="latestnews-item-time">{{a.time}}</div>
                                                 </div>
-                                                <div class="latestnews-item-textMore" v-bind:style="a.value">
+                                                <div class="latestnews-item-textMore">
 
                                                     <p>{{a.textMore}}</p>
                                                     <img v-bind:src="a.img" alt class="latestnews-item-pic">
@@ -3366,6 +3366,7 @@
             //slideIndex:1,
             i:0,
             isShow:true,
+            isDivShow:false,
             nowIndex:0,
             inv:2000
         },
@@ -3386,6 +3387,7 @@
                 clearInterval(this.timer)
             },
 
+
            /* showSlides: function (n) {
                 
                     var slides = document.getElementsByClassName("bannerLeft-list")
@@ -3405,6 +3407,22 @@
                 slides[slideIndex - 1].style.display = "block"
                 dots[slideIndex - 1].className += " active"}, 
              */
+            
+            divShow(index){
+                if(this.isDivShow)
+                {
+                    console.log("true")
+                    document.getElementsByClassName("latestnews-item-textMore").style.display="none"
+                    this.isDivShow=false
+                }
+                else
+                {
+                    console.log("false")
+                    document.getElementsByClassName("latestnews-item-textMore").style.display="block"
+                    this.isDivShow=true
+                }
+
+},
 
 
             latest(active, value, id) {
