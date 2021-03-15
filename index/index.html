@@ -328,7 +328,7 @@
         display: inline-block;
         padding: 6px;
         background: url(image/home.png) no-repeat;
-        transform: rotate(-180deg);
+        transform: rotate(-0deg);
         background-size: 246px 1012px;
         background-position: 0 -38px;
         cursor: pointer;
@@ -339,10 +339,9 @@
     .main-left-sub-list {
         transition: all .5s linear;
         overflow: hidden;
-        max-height: 0;
+        height: 0;
         width: 140px;
         margin-left: -20px;
-
     }
 
     .main-left-sub-item1 {
@@ -1212,7 +1211,6 @@
     }
 
     .latestnews-item-textMore {
-        height: auto;
         position: relative;
         font-size: 13px;
         color: #787878;
@@ -1857,22 +1855,6 @@
         visibility: hidden;
         height: 0;
     }
-
-    .open {
-        max-height: 162px;
-    }
-
-    .close {
-        width: 24px;
-        height: 24px;
-        float: right;
-        background: url(image/home.png) no-repeat;
-        background-size: 24px 114px;
-        background-position: 0 0;
-        position: relative;
-        top: 9px;
-        cursor: pointer;
-    }
 </style>
 
 <body>
@@ -1944,10 +1926,10 @@
                                     <li class="main-left-item" v-for="a in articles">
                                         <div v-if="a.sub=='资讯'">
                                             <div class="main-left-content">
-                                                <span class="left-open-icon"></span>
+                                                <span class="left-open-icon" v-on:click="openIcon()" id="leftOpenIcon"></span>
                                                 <a v-bind:href="a.url" class="main-left-content-item">{{a.sub}}</a>
                                             </div>
-                                            <div class="main-left-sub-list  open">
+                                            <div class="main-left-sub-list" id="openIconList">
                                                 <ul class="main-left-sub-item2">
                                                     <li class="sub-item2" v-for="a in item2">
                                                         <a v-bind:href="a.url">{{a.sub}}</a>
@@ -2012,7 +1994,7 @@
                                         <div class="pre" v-on:click="goto(prevIndex)"></div>
                                         <div class="next" v-on:click="goto(nextIndex)"></div>
                                         <div class="bannerLeft-slide-list">
-                                            <div class="bannerLeft-slide-item"v-for="(a,index) in bannerLeft"  v-on:click="goto(index)" >
+                                            <div class="bannerLeft-slide-item" v-for="(a,index) in bannerLeft"  v-on:click="goto(index)" >
                                                 <span class="bannerLeft-slide-item-line"> </span>
                                                 <span class="bannerLeft-slide-item-bg"></span>
                                             </div>
@@ -2178,12 +2160,12 @@
                                                 <div class="latestnews-line">
 
                                                 </div>
-                                                <div class="latestnews-item-head" v-on:click="divShow(index)">
+                                                <div class="latestnews-item-head">
                                                     <span class="latestnews-item-icon"></span>
-                                                    <div class="latestnews-item-title">{{a.text}}</div>
+                                                    <div class="latestnews-item-title"  v-on:click="divShow(index,a.demo,a.isDivShow)">{{a.text}}</div>
                                                     <div class="latestnews-item-time">{{a.time}}</div>
                                                 </div>
-                                                <div class="latestnews-item-textMore">
+                                                <div class="latestnews-item-textMore" v-bind:id="a.demo">
 
                                                     <p>{{a.textMore}}</p>
                                                     <img v-bind:src="a.img" alt class="latestnews-item-pic">
@@ -3094,25 +3076,22 @@
                 }
             ],
             latestNews: [{
-                    active: false,
-                    value: 0,
-                    id: 0,
+                "demo":"demo1",
+                "isDivShow":false,
                     "text": "市场监管总局对橙心优选、多多买菜等五家社区团购企业不正当价格行为作出行政处罚",
                     "time": "5小时",
                     "textMore": "36氪获悉，据市场监管总局官方微信，经查明，橙心优选（北京）科技发展有限公司、上海禹璨信息技术有限公司、深圳美团优选科技有限公司、北京十荟科技有限公司、武汉七种美味科技有限公司等社区团购企业存在低价倾销、价格欺诈等不正当价格行为。对橙心优选（北京）科技发展有限公司等四家社区团购企业分别处以150万元人民币罚款的行政处罚，对武汉七种美味科技有限公司处以50万元人民币罚款的行政处罚。"
                 },
                 {
-                    active: false,
-                    value: 0,
-                    id: 1,
+                    "demo":"demo2",
+                    "isDivShow":false,
                     "text": "360周鸿祎两会三份提案，涉城市网络安全、智能汽车网络安全等",
                     "time": "6小时",
                     "textMore": "36氪获悉，全国政协委员、360集团创始人周鸿祎提交三份提案，分别是加快构建智慧城市安全基座“城市级网络安全基础设施”、加强智能汽车网络安全，以及对网络安全行业特殊人才给予认定和激励政策。针对智能汽车安全问题，他提出把网络安全系统像“安全带”一样列为智能汽车的标配；推进智能汽车网络安全强制测试；强化智能网联汽车产生的数据安全监管等三条建议。"
                 },
                 {
-                    active: false,
-                    value: 0,
-                    id: 2,
+                    "demo":"demo3",
+                    "isDivShow":false,
                     "text": "字节跳动关联公司申请“字节付”商标",
                     "time": "7小时",
                     "textMore": "36氪获悉，天眼查App显示，近日，北京字节跳动科技有限公司申请注册“字节付”“BYTEPAY”商标，申请日为2021年2月22日，国际分类为广告销售、金融物管等，商标状态为“商标申请中”。",
@@ -3120,17 +3099,15 @@
                     "url": "https://www.baidu.com"
                 },
                 {
-                    active: false,
-                    value: 0,
-                    id: 3,
+                    "demo":"demo4",
+                    "isDivShow":false,
                     "text": "野村：重申海底捞“买入”评级，目标价微降2.4%至89.1港元",
                     "time": "8小时",
                     "textMore": "野村发布研究报告，将海底捞目标价由91.3港元下调2.4%至89.1港元，重申“买入”评级。 报告提到，海底捞日前发盈警，预期2020年度净利润下降约90%，比该行预期差，所以将盈利预测削减66%，销售预测下调4.9%。该行认为，随着疫情情况的持续改善，预期人流量将会有所改善，以及去年的积极开业，这可能会推动2021以后的销售，预计2021财年的恢复加快。（智通财经）"
                 },
                 {
-                    active: false,
-                    value: 0,
-                    id: 4,
+                    "demo":"demo5",
+                    "isDivShow":false,
                     "text": "定位高端清洁家电厂商，“顺造科技”获小米集团战略融资",
                     "time": "9小时",
                     "textMore": "36氪获悉，“顺造科技”近日正式宣布，获得小米集团战略融资。顺造科技成立于2019年7月，是一家高端清洁电器厂商，其主要产品覆盖家用空间、车载空间、办公空间等众多清洁类场景。创立一年多以来，顺造科技已经推出了包括手持无线吸尘器吸尘器、随手吸尘器、智能扫地机器人等高端清洁电器。"
@@ -3368,23 +3345,42 @@
             isShow:true,
             isDivShow:false,
             nowIndex:0,
-            inv:2000
+            inv:2000,
+            openIconState:false
         },
         methods: {
             goto(index){
                 this.isShow=false
                 setTimeout(()=>{
-                    this.isShow=true,
+                    this.isShow=true
                     this.nowIndex=index
                 },10)
             },
             runInv(){
+
                 this.timer=setInterval(()=>{
                     this.goto(this.nextIndex)
                 },this.inv)
             },
             clearInv(){
                 clearInterval(this.timer)
+            },
+            openIcon(){
+                x=document.getElementById("openIconList")
+                    y=document.getElementById("leftOpenIcon")
+                if(this.openIconState)
+                {
+                x.style.height=("0px")
+                y.style.transform=("rotate(-0deg)")
+                
+                this.openIconState=false
+                }
+                else{
+                x.style.height=("162px")
+                y.style.transform=("rotate(-180deg)")
+                this.openIconState=true
+                }
+                
             },
 
 
@@ -3408,39 +3404,110 @@
                 dots[slideIndex - 1].className += " active"}, 
              */
             
-            divShow(index){
-                if(this.isDivShow)
+            divShow(index,demo,isDivShow){
+                if(demo=="demo1"){
+                    if(isDivShow)
                 {
-                    console.log("true")
-                    document.getElementsByClassName("latestnews-item-textMore").style.display="none"
-                    this.isDivShow=false
+                    //console.log("truedemo1")
+                    x=document.getElementById("demo1")
+                   // x.style.display=("none")
+                    x.style.height=("0")
+                    x.style.opacity=("0.3")
+                    //document.getElementsByClassName("latestnews-item-textMore").style.display=("none")
+                    //isDivShow=false
+                    Vue.set(this.latestNews[index],"isDivShow",false)
                 }
                 else
                 {
-                    console.log("false")
-                    document.getElementsByClassName("latestnews-item-textMore").style.display="block"
-                    this.isDivShow=true
+                   // console.log("falsedemo1")
+                    x=document.getElementById("demo1")
+                   // x.style.display=("block")
+                    x.style.height=("auto")
+                    x.style.opacity=("1")
+                    //document.getElementsByClassName("latestnews-item-textMore").style.display=("block")
+                    //isDivShow=true
+                    Vue.set(this.latestNews[index],"isDivShow",true)
                 }
 
+                }
+                else if(demo=="demo2"){
+                    if(isDivShow)
+                {
+                   // console.log("truedemo2")
+                    
+                    x=document.getElementById("demo2")
+                   // x.style.display=("none")
+                    x.style.height=("0")
+                    x.style.opacity=("0.3")
+                    //document.getElementsByClassName("latestnews-item-textMore").style.display=("none")
+                    //this.isDivShow=false
+                    Vue.set(this.latestNews[index],"isDivShow",false)
+                }
+                else
+                {
+                   // console.log("falsedemo2")
+                    x=document.getElementById("demo2")
+                   // x.style.display=("block")
+                    x.style.height=("auto")
+                    x.style.opacity=("1")
+                    //document.getElementsByClassName("latestnews-item-textMore").style.display=("block")
+                    //this.isDivShow=true
+                    Vue.set(this.latestNews[index],"isDivShow",true)
+                }
+                }
+                else if(demo=="demo3"){
+                    if(isDivShow)
+                {
+                    
+                    x=document.getElementById("demo3")
+                    x.style.height=("0")
+                    x.style.opacity=("0.3")
+                    Vue.set(this.latestNews[index],"isDivShow",false)
+                }
+                else
+                {
+                    x=document.getElementById("demo3")
+                    x.style.height=("auto")
+                    x.style.opacity=("1")
+                    Vue.set(this.latestNews[index],"isDivShow",true)
+                }
+                }
+                else if(demo=="demo4"){
+                    if(isDivShow)
+                {
+                    
+                    x=document.getElementById("demo4")
+                    x.style.height=("0")
+                    x.style.opacity=("0.3")
+                    Vue.set(this.latestNews[index],"isDivShow",false)
+                }
+                else
+                {
+                    x=document.getElementById("demo4")
+                    x.style.height=("auto")
+                    x.style.opacity=("1")
+                    Vue.set(this.latestNews[index],"isDivShow",true)
+                }
+                }
+                else{
+                    if(isDivShow)
+                {
+                    
+                    x=document.getElementById("demo5")
+                    x.style.height=("0")
+                    x.style.opacity=("0.3")
+                    Vue.set(this.latestNews[index],"isDivShow",false)
+                }
+                else
+                {
+                    x=document.getElementById("demo5")
+                    x.style.height=("auto")
+                    x.style.opacity=("1")
+                    Vue.set(this.latestNews[index],"isDivShow",true)
+                }
+                }
 },
 
-
-            latest(active, value, id) {
-                if (this.active) {
-                    this.id = this.id
-                    this.latestNews.active = !this.active
-                    this.latestNews.value = "overflow:hidden"
-                    Vue.set(this.latestNews, this.id, this.latestNews[id])
-                    alert(this.latestNews[id], this.id)
-                } else {
-                    this.latestNews.active = !this.active
-                    this.id = this.id
-                    this.latestNews.value = "overflow:visible"
-                    Vue.set(this.latestNews, this.id, this.latestNews[id])
-                    alert(this.latestNews[id], this.id)
-                }
-
-            },
             changeData(key) {
                 this.selectedThemes[key].count += 1
                 //this.splice(key,1,{ selectedThemes:[{ count:"this.selectedThemes[key].count"}]})
@@ -3487,6 +3554,7 @@
         }*/
         mounted() {
         this.runInv();
+        
     }
 
     })
